@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bogy Cosmetics</title>
+        <link rel="stylesheet" href="./css/base.css" />
+        <link rel="stylesheet" href="./css/sidebar.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <img src="./images/logo.jpg" alt="logo" width="100px" />
+                <h3>Bogy Kozmetika, Fodrászat és Szépség Shop</h3>
+            </div>
+            <div class="icons">
+                <a href="">
+                    <img src="./images/icons/search.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="./images/icons/person.png" alt="" />
+                </a>
+                <a href="">
+                    <img src="./images/icons/shopping_cart.png" alt="" />
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div id="searchBar">
+                <form class="search" action="">
+                    <input
+                        type="search"
+                        placeholder="Search here..."
+                        required
+                    />
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="sideBar">
+                <details>
+                    <summary>kategóriák</summary>
+                    <ol>
+                        <li>
+                            <a href="./categoties/hajápolás.html">hajápolás</a>
+                        </li>
+                        <li><a href="./categoties/smink.html">smink</a></li>
+                        <li>
+                            <a href="./categoties/bőrápolás.html">bőrápolás</a>
+                        </li>
+                        <li><a href="./categoties/egyéb.html">egyéb</a></li>
+                    </ol>
+                </details>
+                <details>
+                    <summary>Információk</summary>
+                    <div class="item">
+                        <h3>Információk</h3>
+                        <p>
+                          <a href="#">Rólunk</a>
+                        </p>
+                        <p>
+                        <a href="#">Kedvezmények</a>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <h3>Ügyfélszolgálat</h3>
+                        <ol>
+                            <li>
+                                <a href="#">Szállítás</a>
+                            </li>
+                            <li>
+                                <a href="#">Visszaküldés es reklamáció</a>
+                            </li>
+                            <li>
+                                <a href="#">Webáruház értékelése</a>
+                            </li>
+                            <li>
+                                <a href="ászf.html">ÁSZF</a>
+                            </li>
+                            <li>
+                                <a href="#">Adatkezelési tájékoztató</a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="item">
+                        <h3 id="kapcsolatok">Kapcsolatok</h3>
+                        <p>Cím: 7400 Kaposvár horváth utca 28.</p>
+                        <p>
+                            telefonszám:
+                            <a href="#">+36 30/500 8548</a>
+                        </p>
+                        <p>
+                            E-mail:
+                            <a href="#">PAIZSBOGLARKA15&ensp;@GMAIL.COM</a>
+                        </p>
+                        <p>
+                            E-mail:
+                            <a href="#">BOGYSZEPESZET&ensp;@GMAIL.COM</a>
+                        </p>
+                    </div>
+                </details>
+            </div>
+            <section class="slideshow">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img
+                            src="./images/hajfesték.jpg"
+                            style="width: 200px"
+                        />
+                        <div class="text">Caption Text</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="./images/hajgumi.jpg" style="width: 200px" />
+                        <div class="text">Caption Two</div>
+                    </div>
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img
+                            src="./images/hajbalzsam.jpg"
+                            style="width: 200px"
+                        />
+                        <div class="text">Caption Three</div>
+                    </div>
+                </div>
+                <br />
+                <div style="text-align: center">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </section>
+            <section class="randomByCategories">
+                <h1>Hajápolás</h1>
+                <section class="randomFromHair">
+                    <div class="card">
+                        <img src="./images/fésű.jpg" alt="" />
+                        <div class="textarea">
+                            <h4 class="product-name js-productName">fésű</h4>
+                            <h4 class="product-price">1990Ft</h4>
+                        </div>
+                        <div class="buttons">
+                            <button class="cart">
+                                <span>kosár</span>
+                                <img
+                                    src="./images/icons/add_shopping_cart.png"
+                                    alt="cart"
+                                />
+                            </button>
+                            <button class="favorite">
+                                <img
+                                    src="./images/icons/favorite.png"
+                                    alt="favorite"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <h1>Smink</h1>
+                <section class="randomFromFace"></section>
+                <h1>Bőrápolás</h1>
+                <section class="randomFromSkin"></section>
+                <h1>Egyéb</h1>
+                <section class="randomFromOther"></section>
+            </section>
+        </main>
+        <footer>
+            <div class="copyright">
+                <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
+            </div>
+        </footer>
+        <script src="./javascript/sideBar.js"></script>
+        <script src="./javascript/slideshow.js"></script>
+        <script src="./javascript/RenderProducts.js" type="module"></script>
+    </body>
+</html>
