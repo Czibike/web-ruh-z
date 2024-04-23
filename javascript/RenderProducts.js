@@ -20,7 +20,7 @@ const randomNumbers = (max, min) => {
   return arr;
 };
 
-function generateHair() {
+function generateCards(container) {
   randomNumbers(products.hair.length, 0);
 
   for (let i = 0; i < arr.length; i++) {
@@ -48,15 +48,19 @@ function generateHair() {
             </div>
           </div>
   `;
-    randomFromHair.innerHTML += template;
+    container.innerHTML += template;
   }
 }
 
-window.onload = generateHair;
+function containerFiller() {
+  generateCards(randomFromHair);
+}
+
+window.onload = containerFiller();
 
 const btn = document.querySelectorAll("js-cart");
-for (let i of btn.length){
+for (let i of btn.length) {
   i.addEventLisener("click", () => {
-    window.open()
-  })
+    window.open();
+  });
 }
