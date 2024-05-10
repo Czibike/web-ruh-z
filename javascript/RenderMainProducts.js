@@ -59,7 +59,7 @@ function containerFiller() {
 window.onload = containerFiller();
 
 const btn = document.querySelectorAll("js-cart");
-for (let i of btn.length) {
+for (let i of btn) {
   i.addEventLisener("click", () => {
     window.open();
   });
