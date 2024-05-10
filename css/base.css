@@ -24,6 +24,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 }
+
 main {
     display: grid;
     grid-template-columns: 15% 1fr;
