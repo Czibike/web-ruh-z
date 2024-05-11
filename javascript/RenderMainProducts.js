@@ -31,23 +31,22 @@ function generateCards(container, array) {
     let img = array[num].image;
     let template = "";
     template = `
-  <div class="card">
-            <img src="${img}" alt="" />
-            <div class="textarea">
-              <h4 class="product-name js-productName">${name}</h4>
-              <h4 class="product-price">${price}</h4>
-            </div>
-            <div class="buttons">
-              <button class="cart">
-                <span>kosár</span>
-                <img src="./images/icons/add_shopping_cart.png" alt="cart">
-              </button>
-              <button class="favorite">
-                <img src="./images/icons/favorite.png" alt="favorite">
-              </button>
-            </div>
+        <div class="card">
+          <img src="${img}" alt="" />
+          <div class="textarea">
+            <h4 class="product-name js-productName">${name}</h4>
+            <h4 class="product-price">${price}</h4>
           </div>
-  `;
+          <div class="buttons">
+            <button class="cart">
+              <span>kosár</span>
+              <img src="./images/icons/add_shopping_cart.png" alt="cart">
+            </button>
+            <button class="favorite">
+              <img src="./images/icons/favorite.png" alt="favorite">
+            </button>
+          </div>
+        </div>`;
     container.innerHTML += template;
   };
   arr = [];
