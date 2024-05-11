@@ -20,15 +20,15 @@ const randomNumbers = (max, min) => {
   return arr;
 };
 
-function generateCards(container) {
-  randomNumbers(products.hair.length, 0);
+function generateCards(container, array) {
+  randomNumbers(array.length, 0);
 
   for (let i = 0; i < arr.length; i++) {
     let num = arr[i].valueOf();
 
-    let name = products.hair[num].name;
-    let price = products.hair[num].price;
-    let img = products.hair[num].image;
+    let name = array[num].name;
+    let price = array[num].price;
+    let img = array[num].image;
     let template = "";
     template = `
   <div class="card">
@@ -49,18 +49,15 @@ function generateCards(container) {
           </div>
   `;
     container.innerHTML += template;
-  }
+  };
+  arr = [];
 }
 
 function containerFiller() {
-  generateCards(randomFromHair);
+  generateCards(randomFromHair, products.hair);
+  generateCards(randomFromFace, products.face);
+  generateCards(randomFromSkin, products.skin);
+  generateCards(randomFromOther, products.othrer);
 }
 
 window.onload = containerFiller();
-
-const btn = document.querySelectorAll("js-cart");
-for (let i of btn) {
-  i.addEventLisener("click", () => {
-    window.open();
-  });
-}
