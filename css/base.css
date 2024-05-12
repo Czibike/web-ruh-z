@@ -65,6 +65,7 @@ header .logo {
 
 header .icons {
   display: flex;
+  gap: 0.5rem;
 
   a {
     display: flex;
@@ -135,7 +136,7 @@ header .icons {
 
   & > summary {
     padding: 0.25rem;
-    border-radius: 8px /* 8px 4px 4px */;
+    border-radius: 8px;
     background-color: green;
     cursor: pointer;
 

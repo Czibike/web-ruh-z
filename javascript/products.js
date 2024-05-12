@@ -153,7 +153,7 @@ const products = {
       name: "szemöldök ceruza",
       id: "",
       price: 123,
-      image: "./images/szemöldökceruza.jpg",
+      image: "./images/szemöldökceruza.png",
       desciption:
         "A szemöldök precíz modellezésére megfelelően kemény felrajzoló ceruza, mely ceruza alkalmazása a gyakorló bőrön is megfelelőnek bizonyult. A ceruza sűrű hegyezésével illetve a hegyező fertőtlenítésével elősegíthetjük a sminktetováló beavatkozásunk mikrobiológiai tisztaságát.",
     },

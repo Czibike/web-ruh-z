@@ -1,10 +1,10 @@
-import products from "./products.js";
+import products from "../javascript/products.js";
 
-const hairContainer = document.querySelector(".hair-container");
+const faceContainer = document.querySelector(".face-container");
 let html = "";
 
 window.onload = () => {
-  for (const i of products.hair) {
+  for (const i of products.face) {
     html += `
       <div class="card">
         <img src=".${i.image}" alt="" />
@@ -23,5 +23,5 @@ window.onload = () => {
         </div>
       </div>`;
   }
-  hairContainer.innerHTML = html;
+  faceContainer.innerHTML = html;
 };
