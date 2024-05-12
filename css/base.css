@@ -6,16 +6,20 @@
   --color-white: #eee;
 }
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+* {
+  list-style: none;
+  text-decoration: none;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
   background-color: var(--bg-color);
   height: 100vh;
   height: 100dvh;
@@ -27,7 +31,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 15% 1fr;
+  grid-template-columns: minmax(230px, 15%) 1fr;
   grid-template-rows: auto auto 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -50,21 +54,26 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
 header .logo {
   display: flex;
+
+  h3 {
+    width: 300px;
+  }
 }
-/* header .logo h3 {
-  width: 300px;
-} */
+
 header .icons {
   display: flex;
-}
-header .icons a {
-  display: flex;
-  align-items: center;
-}
-header .icons a img {
-  width: 50px;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+    }
+  }
 }
 
 .search {
@@ -85,10 +94,12 @@ header .icons a img {
     background: transparent;
     border-radius: 3px 0 0 3px;
   }
+
   input:focus {
     outline: 0;
     background: transparent;
   }
+
   button {
     position: relative;
     float: right;
@@ -102,46 +113,56 @@ header .icons a img {
     border-left: 1px solid #fff;
     border-radius: 0 3px 3px 0;
   }
+
   button:hover {
     background: #fff;
     color: #444;
   }
+
   button:active {
     box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
   }
+
   button:focus {
     outline: 0;
   }
 }
+
 .sideBar details {
   margin: 0.5rem;
   border: 2px solid var(--color-purple);
-  border-radius: 5px;
+  border-radius: 10px;
 
-  & li,
-  & p {
-    margin-left: 1rem;
-  }
-
-  summary {
+  & > summary {
+    padding: 0.25rem;
+    border-radius: 8px /* 8px 4px 4px */;
     background-color: green;
-    list-style: none;
     cursor: pointer;
+
     &::after {
       content: "\02795"; /* + */
-      margin-top: 0.25rem;
       margin-right: 0.5rem;
       font-size: 1rem;
       float: right;
     }
   }
-  li {
-    list-style: none;
+
+  &[open] summary {
+    border-radius: 8px 8px 4px 4px;
+
+    &::after {
+      content: "\02796"; /* - */
+    }
   }
-  a {
-    color: var(--color-black);
-    text-decoration: none;
-    cursor: pointer;
+
+  & li,
+  & p {
+    margin-left: 1rem;
+
+    & a {
+      color: var(--color-black);
+      cursor: pointer;
+    }
   }
 }
 
@@ -198,6 +219,7 @@ header .icons a img {
   from {
     opacity: 0.4;
   }
+
   to {
     opacity: 1;
   }
@@ -210,6 +232,7 @@ header .icons a img {
   flex-direction: column;
   gap: 2rem;
 }
+
 .randomFromHair,
 .randomFromFace,
 .randomFromSkin,
@@ -218,6 +241,7 @@ header .icons a img {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 1rem;
 }
+
 @media screen and (max-width: 1320px) {
   .randomFromHair,
   .randomFromFace,
@@ -228,6 +252,7 @@ header .icons a img {
     gap: 1rem;
   }
 }
+
 @media screen and (max-width: 1060px) {
   .randomFromHair,
   .randomFromFace,
@@ -238,6 +263,7 @@ header .icons a img {
     gap: 1rem;
   }
 }
+
 @media screen and (max-width: 768px) {
   .randomFromHair,
   .randomFromFace,
@@ -248,6 +274,7 @@ header .icons a img {
     gap: 1rem;
   }
 }
+
 .card {
   border: 1px solid var(--color-black);
   min-width: 250px;
@@ -257,6 +284,7 @@ header .icons a img {
     display: block;
     margin: 1rem auto;
   }
+
   .textarea {
     display: flex;
     justify-content: space-between;
@@ -264,6 +292,7 @@ header .icons a img {
     * {
       margin: 0.7rem;
     }
+
     h2 {
       font-size: 20px;
     }
@@ -292,17 +321,20 @@ header .icons a img {
         box-shadow: #fc894d 0 1px 10px;
       }
     }
+
     &.favorite {
       width: 30px;
       background-color: transparent;
       /*justify-self: flex-end;*/
     }
+
     img {
       height: 20px;
       width: 20px;
     }
   }
 }
+
 footer {
   height: 50px;
   display: flex;
