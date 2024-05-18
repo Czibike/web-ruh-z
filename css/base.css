@@ -166,8 +166,11 @@ header .icons {
   & li,
   & p {
     margin-left: 1rem;
+    margin-top: .125rem;
 
     & a {
+      width: 100%;
+      display: inline-block;
       color: var(--color-black);
       cursor: pointer;
     }
