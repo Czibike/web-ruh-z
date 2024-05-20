@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/base.css" />
-    <link rel="stylesheet" href="../css/categories.css">
+    <link rel="stylesheet" href="../css/categories.css" />
   </head>
   <body>
     <header>
@@ -45,17 +45,17 @@
           </ol>
         </details>
         <details>
-            <summary>Szolgáltatások</summary>
-                <ol>
-                    <li><a href="../fodrász.html">Fodrászat</a></li>
-                    <li><a href="../kozmetika.html">Kozmetika</a></li>
-                  </ol>
+          <summary>Szolgáltatások</summary>
+          <ol>
+            <li><a href="../fodrász.html">Fodrászat</a></li>
+            <li><a href="../kozmetika.html">Kozmetika</a></li>
+          </ol>
         </details>
         <details>
           <summary>Információk</summary>
           <ol>
-              <li><a href="#">Rólunk</a></li>
-              <li><a href="#">Kedvezmények</a></li>
+            <li><a href="#">Rólunk</a></li>
+            <li><a href="#">Kedvezmények</a></li>
           </ol>
         </details>
         <details>
@@ -86,11 +86,31 @@
         </details>
       </div>
       <section class="main-container">
-        <h2>Smink</h2>
-        <div class="face-container container"></div>
+        <div class="mainHeader">
+          <h2>Hajápolás</h2>
+          <div class="sort-and-grid">
+            <select name="" id="">
+              <option value="">legnépszerűbb</option>
+              <option value="">név szerint felfele</option>
+              <option value="">név szerint lefele</option>
+              <option value="">ár szerint felfele</option>
+              <option value="">ár szerint lefele</option>
+            </select>
+            <div class="grid">
+              <input type="checkbox" name="switch" id="switch" />
+              <label for="switch"></label>
+            </div>
+          </div>
+        </div>
+        <div class="face-container container" id="products-container"></div>
       </section>
     </main>
     <footer></footer>
     <script type="module" src="../templates/RenderFaceProducts.js"></script>
+    <script>
+      document.getElementById("switch").addEventListener("click", () => {
+        document.getElementById("products-container").classList.toggle("list");
+      });
+    </script>
   </body>
 </html>

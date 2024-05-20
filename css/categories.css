@@ -7,6 +7,40 @@ main {
   position: relative;
 }
 
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort-and-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  & input {
+    display: none;
+  }
+
+  & label {
+    width: 4rem;
+    height: 2rem;
+    display: inline-block;
+    border: 1px solid black;
+
+    &::before {
+      content: url(../images/icons/apps.png);
+      margin-top: 2px;
+      display: inline-block;
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.sort-and-grid input:checked + label::before {
+  content: url(../images/icons/menu.png);
+  margin-left: 32px;
+}
+
 .main-container {
   margin: 1rem;
   display: flex;
@@ -20,13 +54,28 @@ main {
   gap: 0.5rem;
 }
 
-.mainHeader {
+.list {
   display: flex;
-  justify-content: space-between;
-}
+  flex-direction: column;
 
-sort-and-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  .card {
+    display: flex;
+
+    & > img {
+      margin: 0.5rem;
+      height: calc(100% - 1rem);
+    }
+
+    & > .txt-and-btn {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      & > * {
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
 }
