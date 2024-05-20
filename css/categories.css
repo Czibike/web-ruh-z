@@ -19,3 +19,14 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 0.5rem;
 }
+
+.mainHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+sort-and-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
