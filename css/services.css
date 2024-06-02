@@ -4,3 +4,7 @@ main {
 .sort-info {
     display: flex;
 }
+
+input {
+    margin: 0.25rem;
+}
