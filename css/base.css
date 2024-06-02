@@ -67,6 +67,7 @@ header .logo {
 header .icons {
   display: flex;
   gap: 0.5rem;
+  margin-right: 0.5rem;
 
   .icon {
     display: flex;

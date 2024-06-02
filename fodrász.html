@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/services.css" />
   </head>
   <body>
     <header>
@@ -14,30 +15,841 @@
         </a>
         <h3>Bogy Kozmetika, Fodrászat és Szépség Shop</h3>
       </div>
-      <div class="icons">
-        <a href="">
-          <img src="./images/icons/search.png" alt="" />
-        </a>
-        <a href="">
-          <img src="./images/icons/person.png" alt="" />
-        </a>
-        <a href="">
-          <img src="./images/icons/shopping_cart.png" alt="" />
-        </a>
-      </div>
-    </header>
-
-    <main>
       <div id="searchBar">
         <form class="search" action="">
           <input type="search" placeholder="Search here..." required />
           <button type="submit">Search</button>
         </form>
       </div>
+      <div class="icons">
+        <div class="icon">
+          <label for="search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 -960 960 960"
+              width="48px"
+              fill="#000000"
+            >
+              <path
+                d="M765-144 526-383q-30 22-65.79 34.5-35.79 12.5-76.18 12.5Q284-336 214-406t-70-170q0-100 70-170t170-70q100 0 170 70t70 170.03q0 40.39-12.5 76.18Q599-464 577-434l239 239-51 51ZM384-408q70 0 119-49t49-119q0-70-49-119t-119-49q-70 0-119 49t-49 119q0 70 49 119t119 49Z"
+              />
+            </svg>
+          </label>
+        </div>
+        <div class="icon">
+          <a href="./account.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 -960 960 960"
+              width="48px"
+              fill="#000000"
+            >
+              <path
+                d="M479.95-484.11q-68.68 0-112.3-43.62-43.63-43.63-43.63-112.31t43.63-112.35q43.62-43.68 112.3-43.68t112.47 43.68q43.8 43.67 43.8 112.35 0 68.68-43.8 112.31-43.79 43.62-112.47 43.62Zm-325.93 333.2v-100.41q0-39.56 19.92-68.04 19.91-28.49 51.43-43.27 67.48-30.24 129.69-45.36 62.2-15.12 124.88-15.12 63.13 0 124.79 15.62 61.66 15.62 128.82 45.05 32.88 14.6 52.78 43 19.89 28.4 19.89 68.06v100.47h-652.2Zm68.13-68.13h515.7v-31.37q0-15.85-9.5-30.22-9.5-14.38-23.5-21.3-63.05-30.29-115.45-41.55-52.4-11.26-109.52-11.26-56.64 0-110.28 11.26t-115.35 41.51q-14.1 6.93-23.1 21.31-9 14.39-9 30.25v31.37Zm257.8-333.2q38.09 0 63-24.86 24.9-24.87 24.9-62.98 0-38.21-24.86-63.03-24.85-24.82-62.94-24.82-38.09 0-63 24.83-24.9 24.84-24.9 62.9 0 38.17 24.86 63.06 24.85 24.9 62.94 24.9Zm.05-87.85Zm0 421.05Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="./cart.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="48px"
+              viewBox="0 -960 960 960"
+              width="48px"
+              fill="#000000"
+            >
+              <path
+                d="M286.79-78.37Q257-78.37 236-99.58t-21-51q0-29.79 21.21-50.79t51-21q29.79 0 50.79 21.21 21 21.22 21 51 0 29.79-21.21 50.79t-51 21Zm400 0Q657-78.37 636-99.58t-21-51q0-29.79 21.21-50.79t51-21q29.79 0 50.79 21.21 21 21.22 21 51 0 29.79-21.21 50.79t-51 21Zm-447.25-660L345.48-518.5h287.28l120.22-219.87H239.54Zm-32.87-65.26h582.14q26.13 0 39.76 23.63 13.63 23.63.19 47.5L697.83-496.43q-11.48 19.47-29.51 31.45Q650.3-453 628.4-453H327.11l-54.33 101.37h488.85v65.26H277q-43.91 0-63.13-29.43-19.22-29.44.74-65.63L277.89-498 127.33-817.37H48.37v-65.26h121.3l37 79ZM345.48-518.5h287.28-287.28Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#szolgáltatás">Szolgáltatásaink</a></li>
+            <li><a href="#prices">Árak</a></li>
+            <li><a href="">Galéria</a></li>
+            <li><a href="">Vélemények</a></li>
+            <li><a href="">Elérhetőségeink</a></li>
+          </ul>
+        </nav>
+        <button class="ip-btn" type="button"><a href="idopont">Időpontot szeretnék</a></button>
+      </section>
+      <section class="sort-info">
+        <div class="element">
+          <div class="icon"></div>
+          <div class="counter">
+            <div class="value">4</div>
+            <div class="title">fodrász</div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="icon"></div>
+          <div class="counter">
+            <div class="value">543365</div>
+            <div class="title">boldog vendég</div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="icon"></div>
+          <div class="counter">
+            <div class="value">10</div>
+            <div class="title">év tapasztalat</div>
+          </div>
+        </div>
+        <div class="element">
+          <div class="icon"></div>
+          <div class="counter">
+            <div class="value">1224</div>
+            <div class="title">kg felkent festék</div>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="header">
+          <div class="">
+            <p>BOGY FODRÁSZSZALON</p>
+          </div>
+          <div id="szolgáltatás">
+            <h2>Szolgáltatásaink</h2>
+          </div>
+          <div class="">
+            <p>
+              Kombináljuk a hagyományos technikákat a modern stílusokkal,
+              biztosítva a vágási, festési és ápolási szolgáltatásunk magas
+              színvonalát.
+            </p>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <div class="img"></div>
+            <div class="title">HAJVÁGÁS</div>
+            <div class="description">
+              <p>
+                Arcformádhoz, karakteredhez, hajtípusodhoz, igényeidhez igazodva
+                kitaláljuk és megcsináljuk azt a frizurát, ami boldoggá tesz a
+                mindennapokban.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"></div>
+            <div class="title">HAJFESTÉS</div>
+            <div class="description">
+              <p>
+                A legújabb melír/festés technikák mellett, a hagyományos
+                színváltoztatásokat is személyre szabottan készítjük el Neked.
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img"></div>
+            <div class="title">HAJÁPOLÁS</div>
+            <div class="description">
+              <p>
+                Száraz, roncsolt, igénybe vett, festett, szőkített, és göndör
+                hajra is egyedi megoldást kínálunk!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="prices" id="prices">
+        <div class="header">
+          <div class="">
+            <p>BOGY FODRÁSZSZALON</p>
+          </div>
+          <div>
+            <h2>Árak</h2>
+          </div>
+          <div class="">
+            <p>
+              A feltüntetett árak forintban értendőek és az áfát tartalmazzák.
+            </p>
+          </div>
+        </div>
+        <div class="table">
+          <div class="thead"><ul>
+            <li data-active="1"><span>Hajvágás</span></li>
+            <li data-active="2"><span>Szárítás</span></li>
+            <li data-active="3"><span>Festés</span></li>
+            <li data-active="4"><span>Világosítás</span></li>
+            <li data-active="5"><span>Ápolás</span></li>
+            <li data-active="6"><span>Extrák</span></li>
+          </ul></div>
+          <div class="tbody" data-tab="1">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tbody" data-tab="2">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tbody" data-tab="3">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tbody" data-tab="4">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tbody" data-tab="5">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tbody" data-tab="6">
+            <div class="col1 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+            <div class="col2 col">
+              <ul>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+                <li>
+                  <div><span class="name"></span><span class="placeholder"></span><span class="price"></span></div>
+                  <p></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <section id="idopnt" class="idopont">
+          <div class="header">
+            <div class="">
+              <p>BOGY FODRÁSZSZALON</p>
+            </div>
+            <div id="szolgáltatás">
+              <h2>szeretnék időpontot</h2>
+            </div>
+            <div class="">
+              <p>
+                Hívj minket bátran vagy töltsd ki az igényfelmérő űrlapunkat és mi 24 órán belül felvesszük veled a kapcsolatot!
+              </p>
+            </div>
+          </div>
+          <div class="idopont-form">
+            <form action="">
+
+            </form>
+          </div>
+        </section>
+      </section>
+
+    </main>
+    <section class="sidebar-wrapper">
       <div class="sideBar"></div>
       <script src="./templates/RenderSidebar.js"></script>
-      <section class="fodrász"></section>
-    </main>
+    </section>
     <footer>
       <div class="copyright">
         <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
