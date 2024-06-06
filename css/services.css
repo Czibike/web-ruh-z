@@ -5,14 +5,6 @@ main {
 input {
   margin: 0.25rem;
 }
-.price {
-  text-transform: uppercase;
-}
-.tbody {
-  margin: 3rem;
-  display: flex;
-  gap: 1rem;
-}
 
 /*----- Fodrászat -----*/
 
@@ -29,11 +21,13 @@ section[id] {
   align-items: center;
 
   > * {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   .description {
     width: 50%;
+    margin-top: 1rem;
+    margin-bottom: var(--margin);
     text-align: center;
   }
 }
@@ -97,5 +91,59 @@ section[id] {
 
   .card {
     width: 20%;
+    background-color: var(--color-purple);
+    border: none;
+
+    * {
+      text-align: center;
+    }
+
+    .img > img {
+      width: 70%;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0px 0px 10px #000000);
+    }
+
+    .title {
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      margin: 0 2rem 3rem 2rem;
+    }
   }
+}
+
+.prices .table .thead ul {
+  width: fit-content;
+  margin: 0 auto;
+
+  > li {
+    padding: 1rem;
+    display: inline-block;
+    color: white;
+    background-color: var(--color-dark-purple);
+    border: 2px solid var(--color-purple);
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+
+    &:hover {
+      color: black;
+      background-color: var(--color-purple);
+      border: 2px solid var(--color-dark-purple);
+    }
+  }
+}
+
+.prices .table .tbody {
+  margin: 3rem;
+  display: flex;
+  gap: 1rem;
+}
+.price {
+  text-transform: uppercase;
+}
+.placeholder {
+  border-bottom: 2px dotted red;
 }
