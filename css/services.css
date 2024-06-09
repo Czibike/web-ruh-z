@@ -137,13 +137,49 @@ section[id] {
 }
 
 .prices .table .tbody {
+  --side-margin: 2rem;
+  --upper-margin: 1rem;
+  width: 95%;
   margin: 3rem;
+  border: 1px solid black;
   display: flex;
+  justify-content: center;
   gap: 1rem;
+  
+  .col {
+  flex-grow: 1;
+  margin: var(--upper-margin) var(--side-margin);
+  
+    & ul li {
+      div {
+        display: flex;
+        gap: 0.5rem;
+        
+        .name {
+          font-weight: bold;
+        }
+        /*TODO: A pontvonalat a sor közepére "igazítani"*/
+        .placeholder {
+          flex-grow: 1;
+          border-bottom: 2px dotted red;
+          text-decoration-line: line-through;
+          text-decoration-color: red;
+          text-decoration-style: dotted;
+        }
+        
+        .price {
+          text-transform: uppercase;
+        }
+      }
+      
+      & p {
+        margin-top: calc( var(--upper-margin) / 2);
+        margin-bottom: var(--upper-margin);
+      }
+    }
+  }
 }
-.price {
-  text-transform: uppercase;
-}
-.placeholder {
-  border-bottom: 2px dotted red;
+
+.prices .table .tbody.none {
+  display: none;
 }
