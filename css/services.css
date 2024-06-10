@@ -141,41 +141,54 @@ section[id] {
   --upper-margin: 1rem;
   width: 95%;
   margin: 3rem;
-  border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 1rem;
-  
-  .col {
-  flex-grow: 1;
-  margin: var(--upper-margin) var(--side-margin);
-  
-    & ul li {
-      div {
-        display: flex;
-        gap: 0.5rem;
-        
-        .name {
-          font-weight: bold;
+  align-content: center;
+  border: 1px solid black;
+
+  .colwrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .col {
+      flex-grow: 1;
+      margin: var(--upper-margin) var(--side-margin);
+
+      & ul li {
+        div {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+
+          .name {
+            font-weight: bold;
+          }
+
+          .placeholder {
+            flex-grow: 1;
+            border-bottom: 2px dotted green;
+          }
+
+          .price {
+            text-transform: uppercase;
+          }
         }
-        /*TODO: A pontvonalat a sor közepére "igazítani"*/
-        .placeholder {
-          flex-grow: 1;
-          border-bottom: 2px dotted red;
-          text-decoration-line: line-through;
-          text-decoration-color: red;
-          text-decoration-style: dotted;
-        }
-        
-        .price {
-          text-transform: uppercase;
+
+        & p {
+          margin-top: calc(var(--upper-margin) / 2);
+          margin-bottom: var(--upper-margin);
         }
       }
-      
-      & p {
-        margin-top: calc( var(--upper-margin) / 2);
-        margin-bottom: var(--upper-margin);
-      }
+    }
+  }
+  .small-text {
+    margin: var(--upper-margin) var(--side-margin);
+    text-align: center;
+
+    & p:not(:only-child):last-child {
+      margin-top: var(--upper-margin);
     }
   }
 }
