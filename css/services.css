@@ -196,3 +196,34 @@ section[id] {
 .prices .table .tbody.none {
   display: none;
 }
+
+.gallery .images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+
+  .image-container {
+    border: 1px solid darkgray;
+
+    & > img {
+      min-width: 20vw;
+      max-width: 300px;
+      margin: 1px;
+      box-shadow: 0 3px 10px #000;
+    }
+
+    .hashtags {
+    }
+
+    .upper-title-container {
+      .logo {
+        float: left;
+      }
+
+      .title-container {
+        text-align: center;
+      }
+    }
+  }
+}
