@@ -125,6 +125,7 @@ section[id] {
     color: white;
     background-color: var(--color-dark-purple);
     border: 2px solid var(--color-purple);
+    border-radius: 0.5rem;
     cursor: pointer;
     transition: 0.5s all ease-in-out;
 

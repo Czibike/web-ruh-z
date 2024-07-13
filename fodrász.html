@@ -197,16 +197,15 @@
         <div class="table">
           <div class="thead">
             <ul>
-              <li data-active="1"><span>Hajvágás</span></li>
-              <li data-active="2"><span>Szárítás</span></li>
-              <li data-active="3"><span>Festés</span></li>
-              <li data-active="4"><span>Világosítás</span></li>
-              <li data-active="5"><span>Ápolás</span></li>
-              <li data-active="6"><span>Extrák</span></li>
+              <li class="table-btn" data-active="0"><span>Hajvágás</span></li>
+              <li class="table-btn" data-active="1"><span>Szárítás</span></li>
+              <li class="table-btn" data-active="2"><span>Festés</span></li>
+              <li class="table-btn" data-active="3"><span>Világosítás</span></li>
+              <li class="table-btn" data-active="4"><span>Ápolás</span></li>
+              <li class="table-btn" data-active="5"><span>Extrák</span></li>
             </ul>
           </div>
-          <!-- TODO: Javascript megírása -->
-          <div class="tbody" data-tab="1">
+          <div class="tbody js-table " data-tab="0">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -357,7 +356,7 @@
               <p></p>
             </div>
           </div>
-          <div class="tbody" data-tab="2">
+          <div class="tbody js-table none" data-tab="1">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -457,7 +456,7 @@
               </p>
             </div>
           </div>
-          <div class="tbody" data-tab="3">
+          <div class="tbody js-table none" data-tab="2">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -673,7 +672,7 @@
               </p>
             </div>
           </div>
-          <div class="tbody" data-tab="4">
+          <div class="tbody js-table none" data-tab="3">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -745,7 +744,7 @@
               </p>
             </div>
           </div>
-          <div class="tbody" data-tab="5">
+          <div class="tbody js-table none" data-tab="4">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -788,7 +787,7 @@
               <p></p>
             </div>
           </div>
-          <div class="tbody" data-tab="6">
+          <div class="tbody js-table none" data-tab="5">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -1202,5 +1201,6 @@
         <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
       </div>
     </footer>
+    <script src="./javascript/fodraszTable.js"></script>
   </body>
 </html>
