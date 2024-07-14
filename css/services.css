@@ -87,10 +87,11 @@ section[id] {
 
 .services .cards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 5%;
 
   .card {
-    width: 20%;
+    width: min(20%, 350px);
     background-color: var(--color-purple);
     border: none;
 
@@ -224,6 +225,45 @@ section[id] {
 
       .title-container {
         text-align: center;
+      }
+    }
+  }
+}
+
+.idopont {
+  margin: 1rem;
+
+  .form-and-image {
+    display: flex;
+
+    .idopont-form {
+      .after > label::after {
+        content: "*";
+        color: darkred;
+        padding-inline-start: 0.2rem;
+      }
+
+      .inputgroup {
+        display: flex;
+        flex-direction: column;
+
+        & input[type="text"],
+        & input[type="email"],
+        & input[type="tel"] {
+          padding: .25rem .5rem;
+          border: 1px solid black;
+          
+          &::placeholder {
+            color: #3f3f3f;
+          }
+        }
+
+        .options input[type="radio"],
+        .options input[type="checkbox"] {
+          width: .9rem;
+          aspect-ratio: 1;
+          accent-color: var(--color-dark-purple);
+        }
       }
     }
   }

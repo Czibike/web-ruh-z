@@ -200,12 +200,14 @@
               <li class="table-btn" data-active="0"><span>Hajvágás</span></li>
               <li class="table-btn" data-active="1"><span>Szárítás</span></li>
               <li class="table-btn" data-active="2"><span>Festés</span></li>
-              <li class="table-btn" data-active="3"><span>Világosítás</span></li>
+              <li class="table-btn" data-active="3">
+                <span>Világosítás</span>
+              </li>
               <li class="table-btn" data-active="4"><span>Ápolás</span></li>
               <li class="table-btn" data-active="5"><span>Extrák</span></li>
             </ul>
           </div>
-          <div class="tbody js-table " data-tab="0">
+          <div class="tbody js-table" data-tab="0">
             <div class="colwrapper">
               <div class="col1 col">
                 <ul>
@@ -1052,7 +1054,7 @@
         </div>
         <div class="form-and-image">
           <form action="" class="idopont-form">
-            <div class="inputgroup">
+            <div class="inputgroup after">
               <label for="form-field-name">Név</label>
               <input
                 type="text"
@@ -1061,16 +1063,16 @@
                 required
               />
             </div>
-            <div class="inputgroup">
+            <div class="inputgroup after">
               <label for="form-field-email">Email</label>
               <input
                 type="email"
                 id="form-field-email"
-                placeholder="email"
+                placeholder="Email"
                 required
               />
             </div>
-            <div class="inputgroup">
+            <div class="inputgroup after">
               <label for="form-field-message">Telefonszám</label>
               <input
                 type="tel"
@@ -1081,87 +1083,96 @@
             </div>
             <div class="inputgroup">
               <label>Nemed</label>
-              <span>
-                <input type="radio" id="Férfi" />
-                <label for="Férfi">Férfi</label>
-              </span>
-              <span>
-                <input type="radio" id="Nő" />
-                <label for="Nő">Nő</label>
-              </span>
+              <div class="options">
+                <span>
+                  <input type="radio" id="Férfi" />
+                  <label for="Férfi">Férfi</label>
+                </span>
+                <span>
+                  <input type="radio" id="Nő" />
+                  <label for="Nő">Nő</label>
+                </span>
+              </div>
             </div>
-            <div class="inputgroup">
+            <div class="inputgroup after">
               <label>Milyen hosszú a hajad?</label>
-              <span>
-                <input type="radio" name="hair-lenght" id="short" required />
-                <label for="short">Rövid</label>
-              </span>
-              <span>
-                <input type="radio" name="hair-lenght" id="middle" required />
-                <label for="middle">Félhosszú</label>
-              </span>
-              <span>
-                <input type="radio" name="hair-lenght" id="long" required />
-                <label for="long">Hosszú</label>
-              </span>
-              <span>
-                <input
-                  type="radio"
-                  name="hair-lenght"
-                  id="extra-long"
-                  required
-                />
-                <label for="extra-long">Extra hosszú</label>
-              </span>
+              <div class="options">
+                <span>
+                  <input type="radio" name="hair-lenght" id="short" required />
+                  <label for="short">Rövid</label>
+                </span>
+                <span>
+                  <input type="radio" name="hair-lenght" id="middle" required />
+                  <label for="middle">Félhosszú</label>
+                </span>
+                <span>
+                  <input type="radio" name="hair-lenght" id="long" required />
+                  <label for="long">Hosszú</label>
+                </span>
+                <span>
+                  <input
+                    type="radio"
+                    name="hair-lenght"
+                    id="extra-long"
+                    required
+                  />
+                  <label for="extra-long">Extra hosszú</label>
+                </span>
+              </div>
             </div>
             <div class="inputgroup">
-              <span>
-                <input type="checkbox" name="cuting" id="cuting" />
-                <label for="cuting">Vágás</label>
-              </span>
-              <span>
-                <input type="checkbox" name="drying" id="drying" />
-                <label for="drying">Szárítás</label>
-              </span>
-              <span>
-                <input type="checkbox" name="dying" id="dying" />
-                <label for="dying">Festés</label>
-              </span>
-              <span>
-                <input
-                  type="checkbox"
-                  name="clarification"
-                  id="clarification"
-                />
-                <label for="clarification">Világosítás</label>
-              </span>
-              <span>
-                <input type="checkbox" name="grooming" id="grooming" />
-                <label for="grooming">Ápolás</label>
-              </span>
-              <span
-                ><input type="checkbox" name="extras" id="extras" />
-                <label for="extras">Extrák</label>
-              </span>
+              <label>Mely szolgálktatásokat szeretnéd?</label>
+              <div class="options">
+                <span>
+                  <input type="checkbox" name="cuting" id="cuting" />
+                  <label for="cuting">Vágás</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="drying" id="drying" />
+                  <label for="drying">Szárítás</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="dying" id="dying" />
+                  <label for="dying">Festés</label>
+                </span>
+                <span>
+                  <input
+                    type="checkbox"
+                    name="clarification"
+                    id="clarification"
+                  />
+                  <label for="clarification">Világosítás</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="grooming" id="grooming" />
+                  <label for="grooming">Ápolás</label>
+                </span>
+                <span
+                  ><input type="checkbox" name="extras" id="extras" />
+                  <label for="extras">Extrák</label>
+                </span>
+              </div>
             </div>
             <div class="inputgroup">
               <label>Mikor érsz rá?</label>
-              <span>
-                <input type="checkbox" name="SOS" id="SOS" />
-                <label for="SOS">SOS - sürgős!</label>
-              </span>
-              <span>
-                <input type="checkbox" name="8-12" id="8-12" />
-                <label for="8-12">8 és 12 óra között</label>
-              </span>
-              <span>
-                <input type="checkbox" name="12-16" id="12-16" />
-                <label for="12-16">12 és 16 óra között</label>
-              </span>
-              <span>
-                <input type="checkbox" name="16-20" id="16-20" />
-                <label for="16-20">16 és 20 óra között</label>
-              </span>
+              <div class="options">
+                <span>
+                  <input type="checkbox" name="SOS" id="SOS" />
+                  <label for="SOS">SOS - sürgős!</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="8-12" id="8-12" />
+                  <label for="8-12">8 és 12 óra között</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="12-16" id="12-16" />
+                  <label for="12-16">12 és 16 óra között</label>
+                </span>
+                <span>
+                  <input type="checkbox" name="16-20" id="16-20" />
+                  <label for="16-20">16 és 20 óra között</label>
+                </span>
+              </div>
             </div>
             <div class="inputgroup">
               <label for="message">Üzenet</label>

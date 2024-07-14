@@ -8,11 +8,9 @@ for (const btn of btns) {
     for (const table of tables) {
       if (data === table.getAttribute("data-tab").valueOf()) {
         table.classList.remove("none");
-        console.log(table);
       } else if (!table.classList.contains("none")) {
-        table.classList.add("none")
+        table.classList.add("none");
       }
     }
-    console.log(data);
   });
 }
