@@ -70,1142 +70,1164 @@
       </div>
     </header>
 
-    <main>
-      <section class="navbar">
-        <nav>
-          <ul>
-            <li><a href="#services">Szolgáltatásaink</a></li>
-            <li><a href="">Fodrászaink</a></li>
-            <li><a href="#prices">Árak</a></li>
-            <li><a href="#gallery">Galéria</a></li>
-            <li><a href="">Vélemények</a></li>
-            <li><a href="">Elérhetőségeink</a></li>
-          </ul>
-        </nav>
-        <button class="ip-btn" type="button">
-          <a href="#idopont">Időpontot szeretnék</a>
-        </button>
+    <main class="fodrasz">
+      <section class="sidebar-wrapper">
+        <div class="sideBar"></div>
+        <script src="./templates/RenderSidebar.js"></script>
       </section>
-      <section class="sort-info">
-        <div class="element">
-          <div class="icon">
-            <img src="./images/icons/scissors_27.png" alt="cissor" />
-          </div>
-          <div class="counter">
-            <div class="value">4</div>
-            <div class="title">fodrász</div>
-          </div>
-        </div>
-        <div class="element">
-          <div class="icon">
-            <img src="./images/icons/hug_4570555.png" alt="smile" />
-          </div>
-          <div class="counter">
-            <div class="value">43.365</div>
-            <div class="title">boldog vendég</div>
-          </div>
-        </div>
-        <div class="element">
-          <div class="icon">
-            <img src="./images/icons/new-year_1367631.png" alt="calender" />
-          </div>
-          <div class="counter">
-            <div class="value">10</div>
-            <div class="title">év tapasztalat</div>
-          </div>
-        </div>
-        <div class="element">
-          <div class="icon">
-            <img src="./images/icons/silhouette_12762060.png" alt="bottles" />
-          </div>
-          <div class="counter">
-            <div class="value">1224</div>
-            <div class="title">kg felkent festék</div>
-          </div>
-        </div>
-      </section>
-      <section id="services" class="services">
-        <div class="header">
-          <div class="company">
-            <p>BOGY FODRÁSZSZALON</p>
-          </div>
-          <div>
-            <h2>Szolgáltatásaink</h2>
-          </div>
-          <div class="description">
-            <p>
-              Kombináljuk a hagyományos technikákat a modern stílusokkal,
-              biztosítva a vágási, festési és ápolási szolgáltatásunk magas
-              színvonalát.
-            </p>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="card">
-            <div class="img">
-              <img src="./images/piroscsap.hu_haj-02.png" alt="Hajvágás" />
-            </div>
-            <div class="title">HAJVÁGÁS</div>
-            <div class="description">
-              <p>
-                Arcformádhoz, karakteredhez, hajtípusodhoz, igényeidhez igazodva
-                kitaláljuk és megcsináljuk azt a frizurát, ami boldoggá tesz a
-                mindennapokban.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img">
-              <img src="./images/piroscsap.hu_haj-03.png" alt="hajfestés" />
-            </div>
-            <div class="title">HAJFESTÉS</div>
-            <div class="description">
-              <p>
-                A legújabb melír/festés technikák mellett, a hagyományos
-                színváltoztatásokat is személyre szabottan készítjük el Neked.
-              </p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="img">
-              <img src="./images/piroscsap.hu_haj-04.png" alt="hajápolás" />
-            </div>
-            <div class="title">HAJÁPOLÁS</div>
-            <div class="description">
-              <p>
-                Száraz, roncsolt, igénybe vett, festett, szőkített, és göndör
-                hajra is egyedi megoldást kínálunk!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="prices" class="prices">
-        <div class="header">
-          <div class="company">
-            <p>BOGY FODRÁSZSZALON</p>
-          </div>
-          <div>
-            <h2>Árak</h2>
-          </div>
-          <div class="description">
-            <p>
-              A feltüntetett árak forintban értendőek és az áfát tartalmazzák.
-            </p>
-          </div>
-        </div>
-        <div class="table">
-          <div class="thead">
+      <section class="content-wrapper">
+        <section class="navbar">
+          <nav>
             <ul>
-              <li class="table-btn" data-active="0"><span>Hajvágás</span></li>
-              <li class="table-btn" data-active="1"><span>Szárítás</span></li>
-              <li class="table-btn" data-active="2"><span>Festés</span></li>
-              <li class="table-btn" data-active="3">
-                <span>Világosítás</span>
-              </li>
-              <li class="table-btn" data-active="4"><span>Ápolás</span></li>
-              <li class="table-btn" data-active="5"><span>Extrák</span></li>
+              <li><a href="#services">Szolgáltatásaink</a></li>
+              <li><a href="">Fodrászaink</a></li>
+              <li><a href="#prices">Árak</a></li>
+              <li><a href="#gallery">Galéria</a></li>
+              <li><a href="">Vélemények</a></li>
+              <li><a href="">Elérhetőségeink</a></li>
             </ul>
-          </div>
-          <div class="tbody js-table" data-tab="0">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Női rövid haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">11.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">9.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">11.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">10.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">12.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">11.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">13.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Frufru vágás - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">2.000 huf</span>
-                    </div>
-                    <p>frissen mosott hajjal érkező vendégeknek</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Frufru vágás - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">2.500 huf</span>
-                    </div>
-                    <p>frissen mosott hajjal érkező vendégeknek</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col2 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Férfi rövid/divat - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">6.500 huf</span>
-                    </div>
-                    <p>(géppel átmenet)mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Férfi rövid/divat - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.000 huf</span>
-                    </div>
-                    <p>(géppel átmenet)mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Férfi félhosszú/divat - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.000 huf</span>
-                    </div>
-                    <p>(ollóval átmenet)mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Férfi félhosszú/divat - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">10.000 huf</span>
-                    </div>
-                    <p>(ollóval átmenet)mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Fiú/7 éves korig - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">5.000 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Fiú/7 éves korig - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">6.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Lány/7 éves korig - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">6.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Lány/7 éves korig - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.500 huf</span>
-                    </div>
-                    <p>mosás+vágás+szárítás</p>
-                  </li>
-                </ul>
-              </div>
+          </nav>
+          <button class="ip-btn" type="button">
+            <a href="#idopont">Időpontot szeretnék</a>
+          </button>
+        </section>
+        <section class="sort-info">
+          <div class="element">
+            <div class="icon">
+              <img src="./images/icons/scissors_27.png" alt="cissor" />
             </div>
-            <div class="small-text">
-              <p></p>
+            <div class="counter">
+              <div class="value">4</div>
+              <div class="title">fodrász</div>
             </div>
           </div>
-          <div class="tbody js-table none" data-tab="1">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Női rövid/félhosszú haj - Stylist</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">5.800 huf</span>
-                    </div>
-                    <p>mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női rövid/félhosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">7.000 huf</span>
-                    </div>
-                    <p>mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">7.000 huf</span>
-                    </div>
-                    <p>mosás+formára szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.500 huf</span>
-                    </div>
-                    <p>mosás+formára szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">7.600 huf</span>
-                    </div>
-                    <p>mosás+loknira szárítás</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col2 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">9.000 huf</span>
-                    </div>
-                    <p>mosás+loknira szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.000 huf</span>
-                    </div>
-                    <p>mosás+formára szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">9.500 huf</span>
-                    </div>
-                    <p>mosás+formára szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">8.500 huf</span>
-                    </div>
-                    <p>mosás+loknira szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">10.000 huf</span>
-                    </div>
-                    <p>mosás+loknira szárítás</p>
-                  </li>
-                </ul>
-              </div>
+          <div class="element">
+            <div class="icon">
+              <img src="./images/icons/hug_4570555.png" alt="smile" />
             </div>
-            <div class="small-text">
+            <div class="counter">
+              <div class="value">43.365</div>
+              <div class="title">boldog vendég</div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="icon">
+              <img src="./images/icons/new-year_1367631.png" alt="calender" />
+            </div>
+            <div class="counter">
+              <div class="value">10</div>
+              <div class="title">év tapasztalat</div>
+            </div>
+          </div>
+          <div class="element">
+            <div class="icon">
+              <img src="./images/icons/silhouette_12762060.png" alt="bottles" />
+            </div>
+            <div class="counter">
+              <div class="value">1224</div>
+              <div class="title">kg felkent festék</div>
+            </div>
+          </div>
+        </section>
+        <section id="services" class="services">
+          <div class="header">
+            <div class="company">
+              <p>BOGY FODRÁSZSZALON</p>
+            </div>
+            <div>
+              <h2>Szolgáltatásaink</h2>
+            </div>
+            <div class="description">
               <p>
-                Szárításaink mellé a frufru vágás ajándék, amennyiben
-                bejelentkezéskor jelezted nekünk.
+                Kombináljuk a hagyományos technikákat a modern stílusokkal,
+                biztosítva a vágási, festési és ápolási szolgáltatásunk magas
+                színvonalát.
               </p>
             </div>
           </div>
-          <div class="tbody js-table none" data-tab="2">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú/hosszú haj</span>
-                      <span class="placeholder"></span>
-                      <span class="price">19.000 - 21.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú/hosszú haj</span>
-                      <span class="placeholder"></span>
-                      <span class="price">21.000 - 26.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj</span>
-                      <span class="placeholder"></span>
-                      <span class="price">20.000 - 24.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú haj</span>
-                      <span class="placeholder"></span>
-                      <span class="price">23.500 - 27.500 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női rövid hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">17.500 - 20.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női rövid hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">21.000 - 25.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">21.500 - 24.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női félhosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">25.000 - 28.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">24.000 - 27.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női hosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">28.500 - 31.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">31.000 - 37.500 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+szárítás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Női extra hosszú teljes</span>
-                      <span class="placeholder"></span>
-                      <span class="price">38.000 - 45.000 huf</span>
-                    </div>
-                    <p>hajfestés+mosás+vágás+szárítás</p>
-                  </li>
-                </ul>
+          <div class="cards">
+            <div class="card">
+              <div class="img">
+                <img src="./images/piroscsap.hu_haj-02.png" alt="Hajvágás" />
               </div>
-              <div class="col2 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Rövid fóliás melír (festékkel)</span>
-                      <span class="placeholder"></span>
-                      <span class="price">450 huf/fólia</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Félhosszú fóliás melír (festékkel)</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">500 huf/fólia</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Hosszú fóliás melír (festékkel)</span>
-                      <span class="placeholder"></span>
-                      <span class="price">550 huf/fólia</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Extra hosszú fóliás melír (festékkel)</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">600 huf/fólia</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Félhosszú Balayage hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">33.000 - 36.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Hosszú Balayage hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">39.000 - 43.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Extra hosszú Balayage hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">44.000 - 49.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Félhosszú Ombre hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">43.000 - 45.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Hosszú Ombre hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">46.000 - 49.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Extra hosszú Ombre hajfestés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">53.000 - 57.000 huf</span>
-                    </div>
-                    <p>ajándék szárítással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Férfi hajszínezés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">12.000 huf-tól</span>
-                    </div>
-                    <p>American Crew színezővel+vágás</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Festékkel történő felületi pigmentálás</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">5.000 - 16.000 huf</span>
-                    </div>
-                    <p>színezés</p>
-                  </li>
-                </ul>
+              <div class="title">HAJVÁGÁS</div>
+              <div class="description">
+                <p>
+                  Arcformádhoz, karakteredhez, hajtípusodhoz, igényeidhez
+                  igazodva kitaláljuk és megcsináljuk azt a frizurát, ami
+                  boldoggá tesz a mindennapokban.
+                </p>
               </div>
             </div>
-            <div class="small-text">
+            <div class="card">
+              <div class="img">
+                <img src="./images/piroscsap.hu_haj-03.png" alt="hajfestés" />
+              </div>
+              <div class="title">HAJFESTÉS</div>
+              <div class="description">
+                <p>
+                  A legújabb melír/festés technikák mellett, a hagyományos
+                  színváltoztatásokat is személyre szabottan készítjük el Neked.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="img">
+                <img src="./images/piroscsap.hu_haj-04.png" alt="hajápolás" />
+              </div>
+              <div class="title">HAJÁPOLÁS</div>
+              <div class="description">
+                <p>
+                  Száraz, roncsolt, igénybe vett, festett, szőkített, és göndör
+                  hajra is egyedi megoldást kínálunk!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="prices" class="prices">
+          <div class="header">
+            <div class="company">
+              <p>BOGY FODRÁSZSZALON</p>
+            </div>
+            <div>
+              <h2>Árak</h2>
+            </div>
+            <div class="description">
               <p>
-                Szárításaink mellé extraként kérhető (loknis szárítás, hajsütés,
-                hajvasalás), Stylist szárítás árait tartalmazzák.
+                A feltüntetett árak forintban értendőek és az áfát tartalmazzák.
               </p>
             </div>
           </div>
-          <div class="tbody js-table none" data-tab="3">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Rövid fóliás melír</span>
-                      <span class="placeholder"></span>
-                      <span class="price">450 hut/fólia</span>
-                    </div>
-                    <p>szőkítővel-árnyalással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Félhosszú fóliás melír</span>
-                      <span class="placeholder"></span>
-                      <span class="price">500 hut/fólia</span>
-                    </div>
-                    <p>szőkítővel-árnyalással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Hosszú fóliás melír</span>
-                      <span class="placeholder"></span>
-                      <span class="price">550 hut/fólia</span>
-                    </div>
-                    <p>szőkítővel-árnyalással</p>
-                  </li>
-                </ul>
+          <div class="table">
+            <div class="thead">
+              <ul>
+                <li class="table-btn" data-active="0"><span>Hajvágás</span></li>
+                <li class="table-btn" data-active="1"><span>Szárítás</span></li>
+                <li class="table-btn" data-active="2"><span>Festés</span></li>
+                <li class="table-btn" data-active="3">
+                  <span>Világosítás</span>
+                </li>
+                <li class="table-btn" data-active="4"><span>Ápolás</span></li>
+                <li class="table-btn" data-active="5"><span>Extrák</span></li>
+              </ul>
+            </div>
+            <div class="tbody js-table" data-tab="0">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Női rövid haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">11.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">11.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">10.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">11.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">13.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Frufru vágás - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2.000 huf</span>
+                      </div>
+                      <p>frissen mosott hajjal érkező vendégeknek</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Frufru vágás - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2.500 huf</span>
+                      </div>
+                      <p>frissen mosott hajjal érkező vendégeknek</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col2 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Férfi rövid/divat - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6.500 huf</span>
+                      </div>
+                      <p>(géppel átmenet)mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Férfi rövid/divat - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8.000 huf</span>
+                      </div>
+                      <p>(géppel átmenet)mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Férfi félhosszú/divat - Stylist</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">8.000 huf</span>
+                      </div>
+                      <p>(ollóval átmenet)mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Férfi félhosszú/divat - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">10.000 huf</span>
+                      </div>
+                      <p>(ollóval átmenet)mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fiú/7 éves korig - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">5.000 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fiú/7 éves korig - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Lány/7 éves korig - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Lány/7 éves korig - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8.500 huf</span>
+                      </div>
+                      <p>mosás+vágás+szárítás</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class="col2 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Extra hosszú fóliás melír</span>
-                      <span class="placeholder"></span>
-                      <span class="price">650 hut/fólia</span>
-                    </div>
-                    <p>szőkítővel-árnyalással</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Tőszőkítés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">9.000 - 12.000 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Teljes szőkítés</span>
-                      <span class="placeholder"></span>
-                      <span class="price">14.000 - 20.000 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                </ul>
+              <div class="small-text">
+                <p></p>
               </div>
             </div>
-            <div class="small-text">
+            <div class="tbody js-table none" data-tab="1">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Női rövid/félhosszú haj - Stylist</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">5.800 huf</span>
+                      </div>
+                      <p>mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Női rövid/félhosszú haj - Master</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">7.000 huf</span>
+                      </div>
+                      <p>mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7.000 huf</span>
+                      </div>
+                      <p>mosás+formára szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8.500 huf</span>
+                      </div>
+                      <p>mosás+formára szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7.600 huf</span>
+                      </div>
+                      <p>mosás+loknira szárítás</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col2 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9.000 huf</span>
+                      </div>
+                      <p>mosás+loknira szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8.000 huf</span>
+                      </div>
+                      <p>mosás+formára szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9.500 huf</span>
+                      </div>
+                      <p>mosás+formára szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8.500 huf</span>
+                      </div>
+                      <p>mosás+loknira szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">10.000 huf</span>
+                      </div>
+                      <p>mosás+loknira szárítás</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="small-text">
+                <p>
+                  Szárításaink mellé a frufru vágás ajándék, amennyiben
+                  bejelentkezéskor jelezted nekünk.
+                </p>
+              </div>
+            </div>
+            <div class="tbody js-table none" data-tab="2">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú/hosszú haj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">19.000 - 21.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú/hosszú haj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">21.000 - 26.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">20.000 - 24.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú haj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">23.500 - 27.500 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női rövid hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">17.500 - 20.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női rövid hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">21.000 - 25.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">21.500 - 24.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női félhosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">25.000 - 28.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">24.000 - 27.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női hosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">28.500 - 31.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">31.000 - 37.500 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+szárítás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Női extra hosszú teljes</span>
+                        <span class="placeholder"></span>
+                        <span class="price">38.000 - 45.000 huf</span>
+                      </div>
+                      <p>hajfestés+mosás+vágás+szárítás</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col2 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Rövid fóliás melír (festékkel)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">450 huf/fólia</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Félhosszú fóliás melír (festékkel)</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">500 huf/fólia</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Hosszú fóliás melír (festékkel)</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">550 huf/fólia</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Extra hosszú fóliás melír (festékkel)</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">600 huf/fólia</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Félhosszú Balayage hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">33.000 - 36.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hosszú Balayage hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">39.000 - 43.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Extra hosszú Balayage hajfestés</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">44.000 - 49.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Félhosszú Ombre hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">43.000 - 45.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hosszú Ombre hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">46.000 - 49.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Extra hosszú Ombre hajfestés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">53.000 - 57.000 huf</span>
+                      </div>
+                      <p>ajándék szárítással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Férfi hajszínezés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12.000 huf-tól</span>
+                      </div>
+                      <p>American Crew színezővel+vágás</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Festékkel történő felületi pigmentálás</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">5.000 - 16.000 huf</span>
+                      </div>
+                      <p>színezés</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="small-text">
+                <p>
+                  Szárításaink mellé extraként kérhető (loknis szárítás,
+                  hajsütés, hajvasalás), Stylist szárítás árait tartalmazzák.
+                </p>
+              </div>
+            </div>
+            <div class="tbody js-table none" data-tab="3">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Rövid fóliás melír</span>
+                        <span class="placeholder"></span>
+                        <span class="price">450 hut/fólia</span>
+                      </div>
+                      <p>szőkítővel-árnyalással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Félhosszú fóliás melír</span>
+                        <span class="placeholder"></span>
+                        <span class="price">500 hut/fólia</span>
+                      </div>
+                      <p>szőkítővel-árnyalással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hosszú fóliás melír</span>
+                        <span class="placeholder"></span>
+                        <span class="price">550 hut/fólia</span>
+                      </div>
+                      <p>szőkítővel-árnyalással</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col2 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Extra hosszú fóliás melír</span>
+                        <span class="placeholder"></span>
+                        <span class="price">650 hut/fólia</span>
+                      </div>
+                      <p>szőkítővel-árnyalással</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Tőszőkítés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9.000 - 12.000 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes szőkítés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">14.000 - 20.000 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="small-text">
+                <p>
+                  <span>
+                    * A vegyszeres munkák árai tájékoztató jellegűek,&nbsp;
+                  </span>
+                  <span>
+                    mivel a fizetendő összeg függ a vendég hajhosszától,
+                    hajmennyiségétől.<br />A vegyszeres munkák ára tartalmazza
+                    az anyagköltséget és a technikusi munkadíjat.
+                  </span>
+                </p>
+              </div>
+            </div>
+            <div class="tbody js-table none" data-tab="4">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >SHECARE/KARYN mélyhidratáló, hajszerkezet-újraépítő
+                          kezelés</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">7.500 huf</span>
+                      </div>
+                      <p>szárítás mellé kérhető</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Brazil keratinos - COCOCHOCO -
+                          hajregeneráló/hajkisímító kezelés</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">26.000 - 37.000 huf</span>
+                      </div>
+                      <p>szárítás mellé kérhető</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Joico 4 lépéses hajújraépítő kezelés</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">7.800 - 11.800 huf</span>
+                      </div>
+                      <p>szárítás mellé kérhető</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="small-text">
+                <p></p>
+              </div>
+            </div>
+            <div class="tbody js-table none" data-tab="5">
+              <div class="colwrapper">
+                <div class="col1 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Beauty hullámok - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">+2.500 - 4.500 huf*</span>
+                      </div>
+                      <p>laza loknik, félhosszú/hosszú haj</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Beauty hullámok - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4.000 - 8.000 huf*</span>
+                      </div>
+                      <p>laza loknik, félhosszú/hosszú haj</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Laphullám - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">+2.500 - 4.500 huf*</span>
+                      </div>
+                      <p>hullámos összhatás, félhosszú/hosszú haj</p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Laphullám - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3.000 - 7.000 huf*</span>
+                      </div>
+                      <p>hullámos összhatás, félhosszú/hosszú haj</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col2 col">
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Vasalás - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">+2.200 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Vasalás - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3.300 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fonás - Stylist</span>
+                        <span class="placeholder"></span>
+                        <span class="price">+2.000 - 4.000 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name"
+                          >Menyasszonyi próbakonty - Master</span
+                        >
+                        <span class="placeholder"></span>
+                        <span class="price">20.000 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">"A nyag nap" - Master</span>
+                        <span class="placeholder"></span>
+                        <span class="price">30.000 huf</span>
+                      </div>
+                      <p></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="small-text">
+                <p>* Időpontfoglaláskor fixálandó!</p>
+                <p>
+                  (<strong>Rövid:</strong> pixie.
+                  <strong>Félhosszú:</strong> váll fölötti hossz.
+                  <strong>Hosszú:</strong> válltól-lapockáig.
+                  <strong>Extra hosszú:</strong> lapockától hosszabb.)
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="gallery" class="gallery">
+          <div class="header">
+            <div class="company">
+              <p>BOGY FODRÁSZSZALON</p>
+            </div>
+            <div id="szolgáltatás">
+              <h2>Galéria</h2>
+            </div>
+            <div class="description">
               <p>
-                <span>
-                  * A vegyszeres munkák árai tájékoztató jellegűek,&nbsp;
-                </span>
-                <span>
-                  mivel a fizetendő összeg függ a vendég hajhosszától,
-                  hajmennyiségétől.<br />A vegyszeres munkák ára tartalmazza az
-                  anyagköltséget és a technikusi munkadíjat.
-                </span>
+                A fodrászszalonunk kényelmes környezetet biztosít minden
+                korosztály számára.
               </p>
             </div>
           </div>
-          <div class="tbody js-table none" data-tab="4">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >SHECARE/KARYN mélyhidratáló, hajszerkezet-újraépítő
-                        kezelés</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">7.500 huf</span>
-                    </div>
-                    <p>szárítás mellé kérhető</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Brazil keratinos - COCOCHOCO -
-                        hajregeneráló/hajkisímító kezelés</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">26.000 - 37.000 huf</span>
-                    </div>
-                    <p>szárítás mellé kérhető</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name"
-                        >Joico 4 lépéses hajújraépítő kezelés</span
-                      >
-                      <span class="placeholder"></span>
-                      <span class="price">7.800 - 11.800 huf</span>
-                    </div>
-                    <p>szárítás mellé kérhető</p>
-                  </li>
-                </ul>
+          <div class="images">
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj1.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>3 mounth ago</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="small-text">
-              <p></p>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj2.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>3 mounth ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj3.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>6 mounth ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj4.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>9 mounth ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj5.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>1 year ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj6.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>1 year ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj7.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>1 year ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="image-container">
+              <img src="./images/hajstílusok/haj8.jpg" alt="example image" />
+              <div class="hashtags"></div>
+              <div class="upper-title-container">
+                <div class="logo">
+                  <img src="./images/logo.jpg" alt="logo" height="50" />
+                </div>
+                <div class="title-container">
+                  <div class="title">
+                    <h4>bogy fodrászszalon</h4>
+                  </div>
+                  <div class="date">
+                    <p>1 year ago</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="tbody js-table none" data-tab="5">
-            <div class="colwrapper">
-              <div class="col1 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Beauty hullámok - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">+2.500 - 4.500 huf*</span>
-                    </div>
-                    <p>laza loknik, félhosszú/hosszú haj</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Beauty hullámok - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">4.000 - 8.000 huf*</span>
-                    </div>
-                    <p>laza loknik, félhosszú/hosszú haj</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Laphullám - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">+2.500 - 4.500 huf*</span>
-                    </div>
-                    <p>hullámos összhatás, félhosszú/hosszú haj</p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Laphullám - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">3.000 - 7.000 huf*</span>
-                    </div>
-                    <p>hullámos összhatás, félhosszú/hosszú haj</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="col2 col">
-                <ul>
-                  <li>
-                    <div>
-                      <span class="name">Vasalás - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">+2.200 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Vasalás - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">3.300 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Fonás - Stylist</span>
-                      <span class="placeholder"></span>
-                      <span class="price">+2.000 - 4.000 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">Menyasszonyi próbakonty - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">20.000 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                  <li>
-                    <div>
-                      <span class="name">"A nyag nap" - Master</span>
-                      <span class="placeholder"></span>
-                      <span class="price">30.000 huf</span>
-                    </div>
-                    <p></p>
-                  </li>
-                </ul>
-              </div>
+        </section>
+        <section id="idopont" class="idopont">
+          <div class="header">
+            <div class="company">
+              <p>BOGY FODRÁSZSZALON</p>
             </div>
-            <div class="small-text">
-              <p>* Időpontfoglaláskor fixálandó!</p>
+            <div>
+              <h2>szeretnék időpontot!</h2>
+            </div>
+            <div class="description">
               <p>
-                (<strong>Rövid:</strong> pixie. <strong>Félhosszú:</strong> váll
-                fölötti hossz. <strong>Hosszú:</strong> válltól-lapockáig.
-                <strong>Extra hosszú:</strong> lapockától hosszabb.)
+                Hívj minket bátran vagy töltsd ki az igényfelmérő űrlapunkat és
+                mi 24 órán belül felvesszük veled a kapcsolatot!
               </p>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="gallery" class="gallery">
-        <div class="header">
-          <div class="company">
-            <p>BOGY FODRÁSZSZALON</p>
+          <div class="form-and-image">
+            <form action="" class="idopont-form">
+              <div class="inputgroup after">
+                <label for="form-field-name">Név</label>
+                <input
+                  type="text"
+                  id="form-field-name"
+                  placeholder="Név"
+                  required
+                />
+              </div>
+              <div class="inputgroup after">
+                <label for="form-field-email">Email</label>
+                <input
+                  type="email"
+                  id="form-field-email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="inputgroup after">
+                <label for="form-field-message">Telefonszám</label>
+                <input
+                  type="tel"
+                  id="form-field-message"
+                  placeholder="Telefonszám"
+                  required
+                />
+              </div>
+              <div class="inputgroup">
+                <label>Nemed</label>
+                <div class="options">
+                  <span>
+                    <input type="radio" id="Férfi" />
+                    <label for="Férfi">Férfi</label>
+                  </span>
+                  <span>
+                    <input type="radio" id="Nő" />
+                    <label for="Nő">Nő</label>
+                  </span>
+                </div>
+              </div>
+              <div class="inputgroup after">
+                <label>Milyen hosszú a hajad?</label>
+                <div class="options">
+                  <span>
+                    <input
+                      type="radio"
+                      name="hair-lenght"
+                      id="short"
+                      required
+                    />
+                    <label for="short">Rövid</label>
+                  </span>
+                  <span>
+                    <input
+                      type="radio"
+                      name="hair-lenght"
+                      id="middle"
+                      required
+                    />
+                    <label for="middle">Félhosszú</label>
+                  </span>
+                  <span>
+                    <input type="radio" name="hair-lenght" id="long" required />
+                    <label for="long">Hosszú</label>
+                  </span>
+                  <span>
+                    <input
+                      type="radio"
+                      name="hair-lenght"
+                      id="extra-long"
+                      required
+                    />
+                    <label for="extra-long">Extra hosszú</label>
+                  </span>
+                </div>
+              </div>
+              <div class="inputgroup">
+                <label>Mely szolgálktatásokat szeretnéd?</label>
+                <div class="options">
+                  <span>
+                    <input type="checkbox" name="cuting" id="cuting" />
+                    <label for="cuting">Vágás</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="drying" id="drying" />
+                    <label for="drying">Szárítás</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="dying" id="dying" />
+                    <label for="dying">Festés</label>
+                  </span>
+                  <span>
+                    <input
+                      type="checkbox"
+                      name="clarification"
+                      id="clarification"
+                    />
+                    <label for="clarification">Világosítás</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="grooming" id="grooming" />
+                    <label for="grooming">Ápolás</label>
+                  </span>
+                  <span
+                    ><input type="checkbox" name="extras" id="extras" />
+                    <label for="extras">Extrák</label>
+                  </span>
+                </div>
+              </div>
+              <div class="inputgroup">
+                <label>Mikor érsz rá?</label>
+                <div class="options">
+                  <span>
+                    <input type="checkbox" name="SOS" id="SOS" />
+                    <label for="SOS">SOS - sürgős!</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="8-12" id="8-12" />
+                    <label for="8-12">8 és 12 óra között</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="12-16" id="12-16" />
+                    <label for="12-16">12 és 16 óra között</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" name="16-20" id="16-20" />
+                    <label for="16-20">16 és 20 óra között</label>
+                  </span>
+                </div>
+              </div>
+              <div class="inputgroup">
+                <label for="message">Üzenet</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="8"
+                  placeholder="Üzenet"
+                ></textarea>
+              </div>
+              <div class="inputgroup">
+                <button type="submit">küldés</button>
+              </div>
+            </form>
+            <div class="image"></div>
           </div>
-          <div id="szolgáltatás">
-            <h2>Galéria</h2>
-          </div>
-          <div class="description">
+          <div class="alert">
+            <p>Ne feledd:</p>
             <p>
-              A fodrászszalonunk kényelmes környezetet biztosít minden
-              korosztály számára.
+              Késés esetén 15 percig tartjuk fent a „helyedet” utána töröljük!
+              Késésedet telefonon vagy e-mailen jelezd felénk! 24 órán belüli
+              lemondás esetén 50% felárat számolunk fel a következő
+              látogatásodkor.
             </p>
           </div>
-        </div>
-        <div class="images">
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj1.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>3 mounth ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj2.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>3 mounth ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj3.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>6 mounth ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj4.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>9 mounth ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj5.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>1 year ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj6.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>1 year ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj7.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>1 year ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="image-container">
-            <img src="./images/hajstílusok/haj8.jpg" alt="example image" />
-            <div class="hashtags"></div>
-            <div class="upper-title-container">
-              <div class="logo">
-                <img src="./images/logo.jpg" alt="logo" height="50" />
-              </div>
-              <div class="title-container">
-                <div class="title">
-                  <h4>bogy fodrászszalon</h4>
-                </div>
-                <div class="date">
-                  <p>1 year ago</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="idopont" class="idopont">
-        <div class="header">
-          <div class="company">
-            <p>BOGY FODRÁSZSZALON</p>
-          </div>
-          <div>
-            <h2>szeretnék időpontot!</h2>
-          </div>
-          <div class="description">
-            <p>
-              Hívj minket bátran vagy töltsd ki az igényfelmérő űrlapunkat és mi
-              24 órán belül felvesszük veled a kapcsolatot!
-            </p>
-          </div>
-        </div>
-        <div class="form-and-image">
-          <form action="" class="idopont-form">
-            <div class="inputgroup after">
-              <label for="form-field-name">Név</label>
-              <input
-                type="text"
-                id="form-field-name"
-                placeholder="Név"
-                required
-              />
-            </div>
-            <div class="inputgroup after">
-              <label for="form-field-email">Email</label>
-              <input
-                type="email"
-                id="form-field-email"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <div class="inputgroup after">
-              <label for="form-field-message">Telefonszám</label>
-              <input
-                type="tel"
-                id="form-field-message"
-                placeholder="Telefonszám"
-                required
-              />
-            </div>
-            <div class="inputgroup">
-              <label>Nemed</label>
-              <div class="options">
-                <span>
-                  <input type="radio" id="Férfi" />
-                  <label for="Férfi">Férfi</label>
-                </span>
-                <span>
-                  <input type="radio" id="Nő" />
-                  <label for="Nő">Nő</label>
-                </span>
-              </div>
-            </div>
-            <div class="inputgroup after">
-              <label>Milyen hosszú a hajad?</label>
-              <div class="options">
-                <span>
-                  <input type="radio" name="hair-lenght" id="short" required />
-                  <label for="short">Rövid</label>
-                </span>
-                <span>
-                  <input type="radio" name="hair-lenght" id="middle" required />
-                  <label for="middle">Félhosszú</label>
-                </span>
-                <span>
-                  <input type="radio" name="hair-lenght" id="long" required />
-                  <label for="long">Hosszú</label>
-                </span>
-                <span>
-                  <input
-                    type="radio"
-                    name="hair-lenght"
-                    id="extra-long"
-                    required
-                  />
-                  <label for="extra-long">Extra hosszú</label>
-                </span>
-              </div>
-            </div>
-            <div class="inputgroup">
-              <label>Mely szolgálktatásokat szeretnéd?</label>
-              <div class="options">
-                <span>
-                  <input type="checkbox" name="cuting" id="cuting" />
-                  <label for="cuting">Vágás</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="drying" id="drying" />
-                  <label for="drying">Szárítás</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="dying" id="dying" />
-                  <label for="dying">Festés</label>
-                </span>
-                <span>
-                  <input
-                    type="checkbox"
-                    name="clarification"
-                    id="clarification"
-                  />
-                  <label for="clarification">Világosítás</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="grooming" id="grooming" />
-                  <label for="grooming">Ápolás</label>
-                </span>
-                <span
-                  ><input type="checkbox" name="extras" id="extras" />
-                  <label for="extras">Extrák</label>
-                </span>
-              </div>
-            </div>
-            <div class="inputgroup">
-              <label>Mikor érsz rá?</label>
-              <div class="options">
-                <span>
-                  <input type="checkbox" name="SOS" id="SOS" />
-                  <label for="SOS">SOS - sürgős!</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="8-12" id="8-12" />
-                  <label for="8-12">8 és 12 óra között</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="12-16" id="12-16" />
-                  <label for="12-16">12 és 16 óra között</label>
-                </span>
-                <span>
-                  <input type="checkbox" name="16-20" id="16-20" />
-                  <label for="16-20">16 és 20 óra között</label>
-                </span>
-              </div>
-            </div>
-            <div class="inputgroup">
-              <label for="message">Üzenet</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="8"
-                placeholder="Üzenet"
-              ></textarea>
-            </div>
-            <div class="inputgroup">
-              <button type="submit">küldés</button>
-            </div>
-          </form>
-          <div class="image">
-          </div>
-        </div>
-        <div class="alert">
-          <p>Ne feledd:</p>
-          <p>
-            Késés esetén 15 percig tartjuk fent a „helyedet” utána töröljük!
-            Késésedet telefonon vagy e-mailen jelezd felénk! 24 órán belüli
-            lemondás esetén 50% felárat számolunk fel a következő
-            látogatásodkor.
-          </p>
-        </div>
+        </section>
       </section>
     </main>
-    <section class="sidebar-wrapper">
-      <div class="sideBar"></div>
-      <script src="./templates/RenderSidebar.js"></script>
-    </section>
     <footer>
       <div class="copyright">
         <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
