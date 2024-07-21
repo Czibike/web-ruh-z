@@ -1,0 +1,79 @@
+/*----- section, -header -----*/
+
+section[id] {
+  --margin: 2rem;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > * {
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    width: 50%;
+    margin-top: 1rem;
+    margin-bottom: var(--margin);
+    text-align: center;
+  }
+}
+
+/*----- End -----*/
+
+main.kozmetika {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(230px, 15%) 1fr;
+}
+
+.navbar {
+  height: auto;
+  margin: 1rem;
+
+  .ip-btn {
+    padding: 0.5rem;
+    border: 2px solid black;
+    background: transparent;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+.navbar,
+.navbar nav ul {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
+  & > li {
+    margin: 0.5rem;
+  }
+}
+
+.sort-info {
+  --margin: 5rem;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+  display: flex;
+  justify-content: space-evenly;
+
+  .element-header {
+    display: flex;
+    gap: 2rem;
+
+    .header-title {
+      display: grid;
+      place-items: center;
+    }
+  }
+
+  & ul li {
+    .list-icon {
+      color: darkred;
+      font-weight: bold;
+    }
+  }
+}

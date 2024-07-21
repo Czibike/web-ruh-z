@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Bogy Kozmetika</title>
     <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/services.css" />
+    <link rel="stylesheet" href="./css/kozmetika.css" />
   </head>
   <body>
     <header>
@@ -14,6 +14,12 @@
           <img src="./images/logo.jpg" alt="logo" width="100px" />
         </a>
         <h3>Bogy Kozmetika, Fodrászat és Szépség Shop</h3>
+      </div>
+      <div id="searchBar">
+        <form class="search" action="">
+          <input type="search" placeholder="Search here..." required />
+          <button type="submit">Search</button>
+        </form>
       </div>
       <div class="icons">
         <div class="icon">
@@ -64,16 +70,146 @@
       </div>
     </header>
 
-    <main>
-      <div id="searchBar">
-        <form class="search" action="">
-          <input type="search" placeholder="Search here..." required />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <div class="sideBar"></div>
-      <script src="./templates/RenderSidebar.js"></script>
-      <section class="kozmetika"></section>
+    <main class="kozmetika">
+      <section class="sidebar-wrapper">
+        <div class="sideBar"></div>
+        <script src="./templates/RenderSidebar.js"></script>
+      </section>
+      <section class="content-wrapper">
+        <section class="navbar">
+          <nav>
+            <ul>
+              <li><a href="special-treatments">Kiemelt kezeléseink</a></li>
+              <li><a href="treatments">Kezeléseink</a></li>
+              <li><a href="#">Kozmetikusaink</a></li>
+              <li><a href="#">Árak</a></li>
+              <li><a href="#">Vélemények</a></li>
+              <li><a href="#">Elérhetőségeink</a></li>
+            </ul>
+          </nav>
+          <button class="ip-btn" type="button">
+            <a href="#">Időpontot szeretnék</a>
+          </button>
+        </section>
+        <section class="sort-info">
+          <div class="element">
+            <div class="element-header">
+              <div class="icon">
+                <img src="./images/icons/scissors_27.png" alt="cissor" />
+              </div>
+              <div class="header-title"><h4>Komplexitás</h4></div>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">teljes körű szépségápolás</span>
+              </li>
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text"
+                  >Kozmtika, manikűr akár 1 időonttal</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="element">
+            <div class="element-header">
+              <div class="icon">
+                <img src="./images/icons/hug_4570555.png" alt="smile" />
+              </div>
+              <div class="header-title"><h4>Minőség</h4></div>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">Diplomás szakoktató kollégák</span>
+              </li>
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">
+                  Kipróbált, prémium kategóriás kozmetikumok
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="element">
+            <div class="element-header">
+              <div class="icon">
+                <img src="./images/icons/new-year_1367631.png" alt="calender" />
+              </div>
+              <div class="header-title"><h4>Kényelem</h4></div>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">Otthonos, tágas szalon</span>
+              </li>
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">
+                  Ingyenes parkolás (Plaza 2 perc séta)
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="element">
+            <div class="element-header">
+              <div class="icon">
+                <img
+                  src="./images/icons/silhouette_12762060.png"
+                  alt="bottles"
+                />
+              </div>
+              <div class="header-title"><h4>Biztonság</h4></div>
+            </div>
+            <ul class="list">
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">Elszeparálható kezelőhelyiségek</span>
+              </li>
+              <li>
+                <span class="list-icon">&check;</span>
+                <span class="list-text">Fokozott higiénia</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section id="special-treatments" class="special-treatments">
+          <div class="header">
+            <div class="company">
+              <p>BOGY KOZMETIKA</p>
+            </div>
+            <div>
+              <h2>Kiemelt kezeléseink</h2>
+            </div>
+            <div class="description">
+              <p>
+                Kombináljuk a hagyományos technikákat a modern stílusokkal,
+                biztosítva a vágási, festési és ápolási szolgáltatásunk magas
+                színvonalát.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section id="treatments" class="treatments">
+          <div class="header">
+            <div class="company">
+              <p>BOGY KOZMETIKA</p>
+            </div>
+            <div>
+              <h2>Kezeléseink</h2>
+            </div>
+            <div class="description">
+              <p>
+                Kombináljuk a hagyományos technikákat a modern stílusokkal,
+                biztosítva a vágási, festési és ápolási szolgáltatásunk magas
+                színvonalát.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class=""></section>
+      </section>
     </main>
     <footer>
       <div class="copyright">
