@@ -7,6 +7,78 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/kozmetika bg-images.css" />
     <link rel="stylesheet" href="./css/kozmetika.css" />
+    <style>
+      .prices .table .thead ul {
+        width: fit-content;
+        margin: 0 auto;
+
+        > li {
+          padding: 1rem;
+          display: inline-block;
+          color: white;
+          background-color: var(--color-dark-purple);
+          border: 2px solid var(--color-purple);
+          border-radius: 0.5rem;
+          cursor: pointer;
+          transition: 0.5s all ease-in-out;
+
+          &:hover {
+            color: black;
+            background-color: var(--color-purple);
+            border: 2px solid var(--color-dark-purple);
+          }
+        }
+      }
+
+      .prices .table .tbody {
+        --side-margin: 2rem;
+        --upper-margin: 1rem;
+        width: 95%;
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        border: 1px solid black;
+
+        .colwrapper {
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+
+          .col {
+            flex-grow: 1;
+            margin: var(--upper-margin) var(--side-margin);
+
+            & ul li {
+              div {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+
+                .name {
+                  font-weight: bold;
+                }
+
+                .placeholder {
+                  flex-grow: 1;
+                  border-bottom: 2px dotted green;
+                }
+
+                .price {
+                  text-transform: uppercase;
+                }
+              }
+
+              & p {
+                margin-top: calc(var(--upper-margin) / 2);
+                margin-bottom: var(--upper-margin);
+              }
+            }
+          }
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -963,9 +1035,9 @@
               </p>
             </div>
           </div>
-          <div class="price-table">
+          <div class="table">
             <div class="thead">
-              <ol>
+              <ul>
                 <li class="table-btn" data-active="0">
                   <span></span>
                 </li>
@@ -979,47 +1051,606 @@
                   <span></span>
                 </li>
                 <li class="table-btn" data-active="4">
-                  <span></span>
+                  <span>tartós szőrtelenítés</span>
                 </li>
                 <li class="table-btn" data-active="5">
-                  <span></span>
+                  <span>szőrtelenítés</span>
                 </li>
-              </ol>
+              </ul>
             </div>
             <div class="tbody js-table" data-tab="0">
-              <div class="col-wrapper">
+              <div class="colwrapper">
                 <div class="col col1"></div>
                 <div class="col col2"></div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="1">
-              <div class="col-wrapper">
+              <div class="colwrapper">
                 <div class="col col1"></div>
                 <div class="col col2"></div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="2">
-              <div class="col-wrapper">
+              <div class="colwrapper">
                 <div class="col col1"></div>
                 <div class="col col2"></div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="3">
-              <div class="col-wrapper">
+              <div class="colwrapper">
                 <div class="col col1"></div>
                 <div class="col col2"></div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="4">
-              <div class="col-wrapper">
-                <div class="col col1"></div>
-                <div class="col col2"></div>
+              <div class="colwrapper">
+                <div class="col col1">
+                  <div class="col-title">Nők</div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">bajusz+áll+pajesz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">17 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bajusz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Áll</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">pajesz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Nyak hátul (tarkó)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">13 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Alkarok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">22 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Felkarok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">24 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kézfejek és ujjak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes karok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">45 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Alsó lábszárak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">45 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Combok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">59 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes lábak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">75 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Mellkas</span>
+                        <span class="placeholder"></span>
+                        <span class="price">25 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Has</span>
+                        <span class="placeholder"></span>
+                        <span class="price">25 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes front (mellkas, has)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">45 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Vállak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">19 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hát</span>
+                        <span class="placeholder"></span>
+                        <span class="price">40 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes back (hát, vállak)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">55 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">hónaljak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fazon</span>
+                        <span class="placeholder"></span>
+                        <span class="price">19 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Far</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">
+                          Teljes intim terület (fazon, far, bikini)
+                        </span>
+                        <span class="placeholder"></span>
+                        <span class="price">29 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bikinivonal</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12 000Ft-tól</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col col2">
+                  <div class="col-title">Férfiak</div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">bajusz+áll+pajesz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 500Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bajusz</span>
+                        <span class="placeholder"></span>
+                        <span class="price"></span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Áll</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">pajesz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Nyak hátul (tarkó)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">13 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Alkarok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">25 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Felkarok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">27 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kézfejek és ujjak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes karok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">49 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Alsó lábszárak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">51 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Combok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">64 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes lábak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">85 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Mellkas</span>
+                        <span class="placeholder"></span>
+                        <span class="price">34 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Has</span>
+                        <span class="placeholder"></span>
+                        <span class="price">34 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes front (mellkas, has)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">58 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Vállak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">25 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hát</span>
+                        <span class="placeholder"></span>
+                        <span class="price">45 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes back (hát, vállak)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">60 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">hónaljak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fazon</span>
+                        <span class="placeholder"></span>
+                        <span class="price">19 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Far</span>
+                        <span class="placeholder"></span>
+                        <span class="price">10 00Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">
+                          Teljes intim terület (fazon, far, bikini)
+                        </span>
+                        <span class="placeholder"></span>
+                        <span class="price">32 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bikinivonal</span>
+                        <span class="placeholder"></span>
+                        <span class="price">15 000Ft-tól</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="5">
-              <div class="col-wrapper">
-                <div class="col col1"></div>
-                <div class="col col2"></div>
+              <div class="colwrapper">
+                <div class="col col1">
+                  <div class="col-title">szőrtelenítés hölgyek</div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Végig láb</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Térdig láb+ hátul</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4 900Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Térdig láb</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4 300Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Comb</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Intim gyanta</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 100Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bikini vonal</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 800Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Full intim</span
+                        ><span class="placeholder"></span
+                        ><span class="price">7 200Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hónalj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Has</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3 200Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kar végig</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kar könyékig</span
+                        ><span class="placeholder"></span
+                        ><span class="price">3 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bajusz</span>
+                        <span class="placeholder"></span>
+                        <span class="price">1 100Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Áll</span>
+                        <span class="placeholder"></span>
+                        <span class="price">1 700Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Bajusz+ áll</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 600Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes arc</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3 100Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col col2">
+                  <div class="col-title">szőrtelenítés urak</div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Szemöldök</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hónalj</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 800Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Mellkas</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 100Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Has (csak has)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 700Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Tarkó</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 000Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Vállak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 700Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Hát</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 500</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes front (Mellkas, Has)</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 800Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes back (Hát, Váll, Tarkó)</span>
+                        <span class="placeholder"></span
+                        ><span class="price">8 100Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kar végig</span>
+                        <span class="placeholder"></span>
+                        <span class="price">5 400Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Kar könyékig</span>
+                        <span class="placeholder"></span>
+                        <span class="price">4 100Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Full intim gyanta</span>
+                        <span class="placeholder"></span>
+                        <span class="price">7 600Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Fenék gyanta</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 700Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Alsó lábszárak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">5 500Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Combok</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 200Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Teljes láb</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9 800Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
