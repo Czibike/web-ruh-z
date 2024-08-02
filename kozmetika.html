@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bogy Kozmetika</title>
     <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/fodrasz.css" />
     <link rel="stylesheet" href="./css/kozmetika bg-images.css" />
     <link rel="stylesheet" href="./css/kozmetika.css" />
     <style>
@@ -95,6 +96,13 @@
       .price + .price {
         margin-left: 1.5rem;
       }
+      .idopont-form {
+        .after > label::after {
+          content: "*";
+          color: darkred;
+          padding-inline-start: 0.2rem;
+        }
+      }
     </style>
   </head>
   <body>
@@ -178,7 +186,7 @@
             </ul>
           </nav>
           <button class="ip-btn" type="button">
-            <a href="#">Időpontot szeretnék</a>
+            <a href="#idopont">Időpontot szeretnék</a>
           </button>
         </section>
         <section class="sort-info">
@@ -1046,9 +1054,7 @@
             </div>
             <div class="description">
               <p>
-                Kombináljuk a hagyományos technikákat a modern stílusokkal,
-                biztosítva a vágási, festési és ápolási szolgáltatásunk magas
-                színvonalát.
+                A feltüntetett árak forintban értendőek és az áfát tartalmazzák.
               </p>
             </div>
           </div>
@@ -1292,10 +1298,24 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="time-counter">
+                    <span>1 alkalom</span>
+                    <span>5-ös bérlet</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">INFRASZAUNA</span>
+                        <span class="placeholder"></span>
+                        <span class="price">2 000Ft</span>
+                        <span class="price">8 500Ft</span>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="1">
+            <div class="tbody js-table none" data-tab="1">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1408,7 +1428,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="2">
+            <div class="tbody js-table none" data-tab="2">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1500,7 +1520,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="3">
+            <div class="tbody js-table none" data-tab="3">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1844,7 +1864,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="4">
+            <div class="tbody js-table none" data-tab="4">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -2080,8 +2100,109 @@
               </div>
             </div>
           </div>
+          <script src="./javascript/Table.js"></script>
         </section>
-        <section class=""></section>
+        <section id="idopont" class="idopont">
+          <div class="header">
+            <div class="company">
+              <p>BOGY KOZMETIKA</p>
+            </div>
+            <div>
+              <h2>szeretnék időpontot!</h2>
+            </div>
+            <div class="description">
+              <p>
+                Hívj minket bátran vagy töltsd ki az igényfelmérő űrlapunkat és
+                mi 24 órán belül felvesszük veled a kapcsolatot!
+              </p>
+            </div>
+          </div>
+          <form action="" class="idopont-form">
+            <div class="inputgroup after">
+              <label for="form-field-name">Név</label>
+              <input
+                type="text"
+                id="form-field-name"
+                placeholder="Név"
+                required
+              />
+            </div>
+            <div class="inputgroup after">
+              <label for="form-field-name">Email</label>
+              <input
+                type="email"
+                id="form-field-name"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="inputgroup after">
+              <label for="form-field-name">Telefonszám</label>
+              <input
+                type="tel"
+                id="form-field-name"
+                placeholder="Telefonszám"
+                required
+              />
+            </div>
+            <div class="inputgroup">
+              <label>Nemed</label>
+              <div class="options">
+                <span>
+                  <input type="radio" id="Férfi" name="gender" />
+                  <label for="Férfi">Férfi</label>
+                </span>
+                <span>
+                  <input type="radio" id="Nő" name="gender" />
+                  <label for="Nő">Nő</label>
+                </span>
+              </div>
+            </div>
+            <div class="inputgroup">
+              <label for="treatment">
+                Melyik kezelésre szeretnél jelentkezni?
+              </label>
+              <select name="treatment" id="treatment">
+                <option value="default" selected disabled>
+                  válassz egy kezelést
+                </option>
+                <optgroup label="Bőrfiatalítás, ránckezelés">
+                  <option value="">orvosi szintű peelingek</option>
+                  <option value="">mezoterápia</option>
+                  <option value="">dermapen + mezoterápia</option>
+                  <option value="">rádiófrekvencia</option>
+                  <option value="">mavex gandermás kezelés</option>
+                  <option value="">fényterápia</option>
+                </optgroup>
+                <optgroup label="Dekorkozmetika">
+                  <option value="">smink</option>
+                  <option value="">szempilla és műszempilla</option>
+                  <option value="">szemöldök tetoválás</option>
+                </optgroup>
+                <optgroup label="Klasszikus kozmetika">
+                  <option value="">
+                    probléma megoldó és megelőző kezelések
+                  </option>
+                  <option value="">italwax szőrtelenítés</option>
+                  <option value="">ipl tartós szőrtelenítés</option>
+                </optgroup>
+                <optgroup label="Alakformálás, cellulitkezelés">
+                  <option value="">hullámmasszázs terápia</option>
+                  <option value="">
+                    kavitációs ultrahang + rádiófrekvenciás zsírbontás
+                  </option>
+                  <option value="">kriolipolízis zsírfagyasztás</option>
+                  <option value="">stria, terhességi csíkok kezelése</option>
+                </optgroup>
+                <optgroup label="Wellness">
+                  <option value="">nirvana relaxáló masszázs</option>
+                  <option value="">frissítő és relaxáló masszázsok</option>
+                  <option value="">infraszauna</option>
+                </optgroup>
+              </select>
+            </div>
+          </form>
+        </section>
       </section>
     </main>
     <footer>
