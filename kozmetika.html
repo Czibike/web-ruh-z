@@ -77,6 +77,24 @@
           }
         }
       }
+      .col-title {
+        margin: 0.25rem;
+        display: flex;
+        justify-content: center;
+
+        & > span {
+          font-weight: bolder;
+          text-align: center;
+        }
+      }
+      .time-counter {
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.5rem;
+      }
+      .price + .price {
+        margin-left: 1.5rem;
+      }
     </style>
   </head>
   <body>
@@ -1038,38 +1056,246 @@
             <div class="thead">
               <ul>
                 <li class="table-btn" data-active="0">
-                  <span></span>
+                  <span>Alakformálás, cellulitkezelések</span>
                 </li>
                 <li class="table-btn" data-active="1">
-                  <span></span>
-                </li>
-                <li class="table-btn" data-active="2">
                   <span>Klasszikus kozmetika</span>
                 </li>
-                <li class="table-btn" data-active="3">
+                <li class="table-btn" data-active="2">
                   <span>Dekorkozmetika</span>
                 </li>
-                <li class="table-btn" data-active="4">
+                <li class="table-btn" data-active="3">
                   <span>Tartós (IPL) szőrtelenítés</span>
                 </li>
-                <li class="table-btn" data-active="5">
+                <li class="table-btn" data-active="4">
                   <span>Szőrtelenítés</span>
                 </li>
               </ul>
             </div>
             <div class="tbody js-table" data-tab="0">
               <div class="colwrapper">
-                <div class="col col1"></div>
-                <div class="col col2"></div>
+                <div class="col col1">
+                  <div class="col-title">
+                    <span>
+                      Image skincare professionális kezelések - azonnali,
+                      látható változás
+                    </span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">I PEEL hámlastó kezelések</span>
+                        <span class="placeholder"></span>
+                        <span class="price">19 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">
+                          IMAGE Exkluzív arc, nyak,- dekoltázs kezelések
+                        </span>
+                        <span class="placeholder"></span>
+                        <span class="price">15 000Ft-tól</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col-title">
+                    <span>Mezoterápiás kezelés</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Szemkörnyékre</span>
+                        <span class="placeholder"></span>
+                        <span class="price">5 800Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Arc</span>
+                        <span class="placeholder"></span>
+                        <span class="price">11 800Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Arc + nyak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12 800Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Arc + nyak + dekoltázs</span>
+                        <span class="placeholder"></span>
+                        <span class="price">13 800Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">
+                          Innovera Biorevitalizációs ampullával
+                        </span>
+                        <span class="placeholder"></span>
+                        <span class="price">36 300Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">
+                          Hajkezelés (hajhullás, regenerálás)
+                        </span>
+                        <span class="placeholder"></span>
+                        <span class="price">15 000Ft-tól</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col-title">
+                    <span
+                      >rádiófrekvencia - Hatékony ránckezelés, feszesítés</span
+                    >
+                  </div>
+                  <div class="time-counter">
+                    <span>1 alkalom</span>
+                    <span>6-os bérlet+1</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Arc kezelés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 900Ft</span>
+                        <span class="price">53 400Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Toka kezelés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3 800Ft</span>
+                        <span class="price">22 800Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col-title">
+                    <span>
+                      DermaPen mezoterápiás hatóanyag bevitel, kollagén indukció
+                    </span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">Arc - nyak</span>
+                        <span class="placeholder"></span>
+                        <span class="price">20 000Ft-tól</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Arc - nyak - dekoltázs</span>
+                        <span class="placeholder"></span>
+                        <span class="price">24 000Ft-tól</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col col2">
+                  <div class="col-title">
+                    <span>Alakformáló-, feszesítő kezelések</span>
+                  </div>
+                  <div class="time-counter">
+                    <span>1 alkalom</span>
+                    <span>6-os bérlet+1</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">KAr kezelés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">8 900Ft</span>
+                        <span class="price">48 060Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Comb kezelés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9 500Ft</span>
+                        <span class="price">51 300Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">Has kezelés</span>
+                        <span class="placeholder"></span>
+                        <span class="price">9 500Ft</span>
+                        <span class="price">51 300Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col-title">
+                    <span>Cellulit, fogyasztó kezelés</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">1 alkalom</span>
+                        <span class="placeholder"></span>
+                        <span class="price">3 400Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">4-es bérlet</span>
+                        <span class="placeholder"></span>
+                        <span class="price">12 900Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">6-os bérlet</span>
+                        <span class="placeholder"></span>
+                        <span class="price">18 900Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="col-title">
+                    <span>Krio fagyasztós zsírbontás</span>
+                  </div>
+                  <ul>
+                    <li>
+                      <div>
+                        <span class="name">1 terület</span>
+                        <span class="placeholder"></span>
+                        <span class="price">6 300Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">2 terület</span>
+                        <span class="placeholder"></span>
+                        <span class="price">11 000Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">3 terület</span>
+                        <span class="placeholder"></span>
+                        <span class="price">14 000Ft</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="name">4 terület</span>
+                        <span class="placeholder"></span>
+                        <span class="price">17 000Ft</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="tbody js-table" data-tab="1">
-              <div class="colwrapper">
-                <div class="col col1"></div>
-                <div class="col col2"></div>
-              </div>
-            </div>
-            <div class="tbody js-table" data-tab="2">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1182,7 +1408,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="3">
+            <div class="tbody js-table" data-tab="2">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1191,7 +1417,7 @@
                   <ul>
                     <li>
                       <div>
-                        <span class="name">szempilla festés</span>
+                        <span class="name">Szempilla festés</span>
                         <span class="placeholder"></span>
                         <span class="price">3 000Ft</span>
                       </div>
@@ -1274,7 +1500,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="4">
+            <div class="tbody js-table" data-tab="3">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
@@ -1618,7 +1844,7 @@
                 </div>
               </div>
             </div>
-            <div class="tbody js-table" data-tab="5">
+            <div class="tbody js-table" data-tab="4">
               <div class="colwrapper">
                 <div class="col col1">
                   <div class="col-title">
