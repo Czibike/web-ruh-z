@@ -82,20 +82,25 @@ main.kozmetika {
   display: flex;
   justify-content: space-evenly;
 
-  .element-header {
+  .element {
     display: flex;
-    gap: 2rem;
+  flex-direction: column;
+  
+    .element-header {
+      display: flex;
+      gap: 2rem;
 
-    .header-title {
-      display: grid;
-      place-items: center;
+      .header-title {
+        display: grid;
+        place-items: center;
+      }
     }
-  }
 
-  & ul li {
-    .list-icon {
-      color: darkred;
-      font-weight: bold;
+    & ul li {
+      .list-icon {
+        color: darkred;
+        font-weight: bold;
+      }
     }
   }
 }
@@ -201,7 +206,7 @@ main.kozmetika {
       border-radius: 5px;
       background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
       cursor: pointer;
-      
+
       &:hover {
         box-shadow: #fc894d 0 1px 10px;
       }
