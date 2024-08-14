@@ -1103,7 +1103,7 @@
                     <li>
                       <div>
                         <span class="name">
-                          IMAGE Exkluzív arc, nyak,- dekoltázs kezelések
+                          IMAGE Exkluzív arc, nyak,<br />- dekoltázs kezelések
                         </span>
                         <span class="placeholder"></span>
                         <span class="price">15 000Ft-tól</span>
@@ -1221,7 +1221,7 @@
                   <ul>
                     <li>
                       <div>
-                        <span class="name">KAr kezelés</span>
+                        <span class="name">Kar kezelés</span>
                         <span class="placeholder"></span>
                         <span class="price">8 900Ft</span>
                         <span class="price">48 060Ft</span>
@@ -2164,9 +2164,19 @@
               </div>
             </div>
             <div class="inputgroup">
-              <label for="treatment">
+
+              <!-- radio button 4 külön selets elemhez és JS-es megjelenítéssel  -->
+
+              <label for="category-selector">
                 Melyik kezelésre szeretnél jelentkezni?
               </label>
+              <div class="category-selector" id="category-selector">
+                <input type="radio" name="category" class="category" id="">
+                <input type="radio" name="category" class="category" id="Dekorkozmetika">
+                <input type="radio" name="category" class="category" id="Klasszikus kozmetika">
+                <input type="radio" name="category" class="category" id="">
+                <input type="radio" name="category" class="category" id="">
+              </div>
               <select name="treatment" id="treatment">
                 <option value="default" selected disabled>
                   válassz egy kezelést
