@@ -8,102 +8,6 @@
     <link rel="stylesheet" href="./css/fodrasz.css" />
     <link rel="stylesheet" href="./css/kozmetika bg-images.css" />
     <link rel="stylesheet" href="./css/kozmetika.css" />
-    <style>
-      .prices .table .thead ul {
-        width: fit-content;
-        margin: 0 auto;
-
-        > li {
-          padding: 1rem;
-          display: inline-block;
-          color: white;
-          background-color: var(--color-dark-purple);
-          border: 2px solid var(--color-purple);
-          border-radius: 0.5rem;
-          cursor: pointer;
-          transition: 0.5s all ease-in-out;
-
-          &:hover {
-            color: black;
-            background-color: var(--color-purple);
-            border: 2px solid var(--color-dark-purple);
-          }
-        }
-      }
-
-      .prices .table .tbody {
-        --side-margin: 1.5rem;
-        --upper-margin: 1rem;
-        width: 95%;
-        margin: 3rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        border: 1px solid black;
-
-        .colwrapper {
-          display: flex;
-          justify-content: center;
-
-          .col {
-            flex: 1;
-            margin: var(--upper-margin) var(--side-margin);
-
-            & ul li {
-              div {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-
-                .name {
-                  font-weight: bold;
-                }
-
-                .placeholder {
-                  flex-grow: 1;
-                  border-bottom: 2px dotted green;
-                }
-
-                .price {
-                  text-transform: uppercase;
-                }
-              }
-
-              & p {
-                margin-top: calc(var(--upper-margin) / 2);
-                margin-bottom: var(--upper-margin);
-              }
-            }
-          }
-        }
-      }
-      .col-title {
-        margin: 0.25rem;
-        display: flex;
-        justify-content: center;
-
-        & > span {
-          font-weight: bolder;
-          text-align: center;
-        }
-      }
-      .time-counter {
-        display: flex;
-        justify-content: flex-end;
-        gap: 0.5rem;
-      }
-      .price + .price {
-        margin-left: 1.5rem;
-      }
-      .idopont-form {
-        .after > label::after {
-          content: "*";
-          color: darkred;
-          padding-inline-start: 0.2rem;
-        }
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -2164,57 +2068,108 @@
               </div>
             </div>
             <div class="inputgroup">
-
               <!-- radio button 4 külön selets elemhez és JS-es megjelenítéssel  -->
 
               <label for="category-selector">
                 Melyik kezelésre szeretnél jelentkezni?
               </label>
               <div class="category-selector" id="category-selector">
-                <input type="radio" name="category" class="category" id="">
-                <input type="radio" name="category" class="category" id="Dekorkozmetika">
-                <input type="radio" name="category" class="category" id="Klasszikus kozmetika">
-                <input type="radio" name="category" class="category" id="">
-                <input type="radio" name="category" class="category" id="">
+                <label>
+                  <span>Bőrfiatalítás, ránckezelés</span>
+                  <input
+                    type="radio"
+                    name="category"
+                    class="category"
+                    id="Bőrfiatalítás,-ránckezelés"
+                  />
+                </label>
+                <label>
+                  <span>Dekorkozmetika</span>
+                  <input
+                    type="radio"
+                    name="category"
+                    class="category"
+                    id="Dekorkozmetika"
+                  />
+                </label>
+                <label>
+                  <span>Klasszikus kozmetika</span>
+                  <input
+                    type="radio"
+                    name="category"
+                    class="category"
+                    id="Klasszikus-kozmetika"
+                  />
+                </label>
+                <label>
+                  <span>alakformálás, cellulitkezelés</span>
+                  <input
+                    type="radio"
+                    name="category"
+                    class="category"
+                    id="alakformálás,-cellulitkezelés"
+                  />
+                </label>
+                <label>
+                  <span>Wellness</span>
+                  <input
+                    type="radio"
+                    name="category"
+                    class="category"
+                    id="Wellness"
+                  />
+                </label>
               </div>
-              <select name="treatment" id="treatment">
-                <option value="default" selected disabled>
-                  válassz egy kezelést
-                </option>
-                <optgroup label="Bőrfiatalítás, ránckezelés">
+              <div class="category-container">
+                <select name="" id="Bőrfiatalítás,-ránckezelés" class="">
+                  <option value="default" selected disabled>
+                    válassz egy kezelést
+                  </option>
                   <option value="">orvosi szintű peelingek</option>
                   <option value="">mezoterápia</option>
                   <option value="">dermapen + mezoterápia</option>
                   <option value="">rádiófrekvencia</option>
                   <option value="">mavex gandermás kezelés</option>
                   <option value="">fényterápia</option>
-                </optgroup>
-                <optgroup label="Dekorkozmetika">
+                </select>
+                <select name="" id="Dekorkozmetika" class="none">
+                  <option value="default" selected disabled>
+                    válassz egy kezelést
+                  </option>
                   <option value="">smink</option>
                   <option value="">szempilla és műszempilla</option>
                   <option value="">szemöldök tetoválás</option>
-                </optgroup>
-                <optgroup label="Klasszikus kozmetika">
+                </select>
+                <select name="" id="Klasszikus-kozmetika" class="none">
+                  <option value="default" selected disabled>
+                    válassz egy kezelést
+                  </option>
                   <option value="">
                     probléma megoldó és megelőző kezelések
                   </option>
                   <option value="">italwax szőrtelenítés</option>
                   <option value="">ipl tartós szőrtelenítés</option>
-                </optgroup>
-                <optgroup label="Alakformálás, cellulitkezelés">
+                </select>
+                <select name="" id="alakformálás,-cellulitkezelés" class="none">
+                  <option value="default" selected disabled>
+                    válassz egy kezelést
+                  </option>
                   <option value="">hullámmasszázs terápia</option>
                   <option value="">
                     kavitációs ultrahang + rádiófrekvenciás zsírbontás
                   </option>
                   <option value="">kriolipolízis zsírfagyasztás</option>
                   <option value="">stria, terhességi csíkok kezelése</option>
-                </optgroup>
-                <optgroup label="Wellness">
+                </select>
+                <select name="" id="Wellness" class="none">
+                  <option value="default" selected disabled>
+                    válassz egy kezelést
+                  </option>
                   <option value="">nirvana relaxáló masszázs</option>
                   <option value="">frissítő és relaxáló masszázsok</option>
                   <option value="">infraszauna</option>
-                </optgroup>
-              </select>
+                </select>
+              </div>
             </div>
           </form>
         </section>
@@ -2225,5 +2180,21 @@
         <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
       </div>
     </footer>
+    <script data-content="price select chooser">
+      const radios = document.querySelectorAll(".category");
+      const selectes = document.querySelectorAll("select");
+
+      radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          selectes.forEach((select) => {
+            if (select.id === radio.id) {
+              select.classList.remove("none");
+            } else if (!select.classList.contains("none")) {
+              select.classList.add("none");
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

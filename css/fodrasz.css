@@ -191,9 +191,8 @@ main.fodrasz {
     }
   }
 }
-
-.prices .table .tbody.none {
-  display: none;
+.none {
+  display: none !important;
 }
 
 .gallery .images {
