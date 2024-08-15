@@ -2027,148 +2027,303 @@
             </div>
           </div>
           <form action="" class="idopont-form">
-            <div class="inputgroup after">
-              <label for="form-field-name">Név</label>
-              <input
-                type="text"
-                id="form-field-name"
-                placeholder="Név"
-                required
-              />
-            </div>
-            <div class="inputgroup after">
-              <label for="form-field-name">Email</label>
-              <input
-                type="email"
-                id="form-field-name"
-                placeholder="Email"
-                required
-              />
-            </div>
-            <div class="inputgroup after">
-              <label for="form-field-name">Telefonszám</label>
-              <input
-                type="tel"
-                id="form-field-name"
-                placeholder="Telefonszám"
-                required
-              />
-            </div>
-            <div class="inputgroup">
-              <label>Nemed</label>
-              <div class="options">
-                <span>
-                  <input type="radio" id="Férfi" name="gender" />
-                  <label for="Férfi">Férfi</label>
-                </span>
-                <span>
-                  <input type="radio" id="Nő" name="gender" />
-                  <label for="Nő">Nő</label>
-                </span>
+            <div class="container">
+              <div class="booking-steps">
+                <ol>
+                  <li class="list-item active">
+                    <div class="step-counter">1</div>
+                    <div class="step-title">Kezelések</div>
+                  </li>
+                  <li class="list-item">
+                    <div class="step-counter">2</div>
+                    <div class="step-title">Dátum és időpont</div>
+                  </li>
+                  <li class="list-item">
+                    <div class="step-counter">3</div>
+                    <div class="step-title">Személyes adatok</div>
+                  </li>
+                  <li class="list-item">
+                    <div class="step-counter">4</div>
+                    <div class="step-title">megerősítés</div>
+                  </li>
+                </ol>
               </div>
-            </div>
-            <div class="inputgroup">
-              <!-- radio button 4 külön selets elemhez és JS-es megjelenítéssel  -->
-
-              <label for="category-selector">
-                Melyik kezelésre szeretnél jelentkezni?
-              </label>
-              <div class="category-selector" id="category-selector">
-                <label>
-                  <span>Bőrfiatalítás, ránckezelés</span>
-                  <input
-                    type="radio"
-                    name="category"
-                    class="category"
-                    id="Bőrfiatalítás,-ránckezelés"
-                  />
-                </label>
-                <label>
-                  <span>Dekorkozmetika</span>
-                  <input
-                    type="radio"
-                    name="category"
-                    class="category"
-                    id="Dekorkozmetika"
-                  />
-                </label>
-                <label>
-                  <span>Klasszikus kozmetika</span>
-                  <input
-                    type="radio"
-                    name="category"
-                    class="category"
-                    id="Klasszikus-kozmetika"
-                  />
-                </label>
-                <label>
-                  <span>alakformálás, cellulitkezelés</span>
-                  <input
-                    type="radio"
-                    name="category"
-                    class="category"
-                    id="alakformálás,-cellulitkezelés"
-                  />
-                </label>
-                <label>
-                  <span>Wellness</span>
-                  <input
-                    type="radio"
-                    name="category"
-                    class="category"
-                    id="Wellness"
-                  />
-                </label>
-              </div>
-              <div class="category-container">
-                <select name="" id="Bőrfiatalítás,-ránckezelés" class="">
-                  <option value="default" selected disabled>
-                    válassz egy kezelést
-                  </option>
-                  <option value="">orvosi szintű peelingek</option>
-                  <option value="">mezoterápia</option>
-                  <option value="">dermapen + mezoterápia</option>
-                  <option value="">rádiófrekvencia</option>
-                  <option value="">mavex gandermás kezelés</option>
-                  <option value="">fényterápia</option>
-                </select>
-                <select name="" id="Dekorkozmetika" class="none">
-                  <option value="default" selected disabled>
-                    válassz egy kezelést
-                  </option>
-                  <option value="">smink</option>
-                  <option value="">szempilla és műszempilla</option>
-                  <option value="">szemöldök tetoválás</option>
-                </select>
-                <select name="" id="Klasszikus-kozmetika" class="none">
-                  <option value="default" selected disabled>
-                    válassz egy kezelést
-                  </option>
-                  <option value="">
-                    probléma megoldó és megelőző kezelések
-                  </option>
-                  <option value="">italwax szőrtelenítés</option>
-                  <option value="">ipl tartós szőrtelenítés</option>
-                </select>
-                <select name="" id="alakformálás,-cellulitkezelés" class="none">
-                  <option value="default" selected disabled>
-                    válassz egy kezelést
-                  </option>
-                  <option value="">hullámmasszázs terápia</option>
-                  <option value="">
-                    kavitációs ultrahang + rádiófrekvenciás zsírbontás
-                  </option>
-                  <option value="">kriolipolízis zsírfagyasztás</option>
-                  <option value="">stria, terhességi csíkok kezelése</option>
-                </select>
-                <select name="" id="Wellness" class="none">
-                  <option value="default" selected disabled>
-                    válassz egy kezelést
-                  </option>
-                  <option value="">nirvana relaxáló masszázs</option>
-                  <option value="">frissítő és relaxáló masszázsok</option>
-                  <option value="">infraszauna</option>
-                </select>
+              <div class="booking-body-wrapper">
+                <div class="booking-body">
+                  <div class="booking-body-header">
+                    <h3>Válaszd ki a kezelést</h3>
+                  </div>
+                  <div class="booking-body-content">
+                    <details open>
+                      <summary>Lézeres szőrtelenítés > Nőknek</summary>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Mikro terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Bajusz, áll, pajesz, hónalj, lábfej, térd, kézfej és
+                            ujjak, mellbimbó körül, hascsík, köldökcsík vagy
+                            mellek közötti csík végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Kis terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Hónalj, orca, nyak, bikini, bikinivonal végleges
+                            szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Közepes terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Alkar, felkar, mellkas, has, fenék vagy váll
+                            végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Nagy terület szörtelenítése
+                          </div>
+                          <span class="time-required">45p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Teljes arc, teljes intim, derék, lábszár, comb vagy
+                            hát végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Több terület szörtelenítése
+                          </div>
+                          <span class="time-required">1ó</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            25% egyidejű kedvezmény! Több terület egyidejű
+                            kezelésénél minden 3. terület után egy terület
+                            ajándék!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Teljes test szörtelenítése
+                          </div>
+                          <span class="time-required">2ó</span>
+                        </div>
+                        <div class="card-title">
+                          <span>Akárhány terület egyidejű kezelése</span>
+                        </div>
+                      </div>
+                    </details>
+                    <details>
+                      <summary>Lézeres szőrtelenítés > Férfiaknak</summary>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Mikro terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Bajusz, áll, pajesz, hónalj, lábfej, térd, kézfej és
+                            ujjak, mellbimbó körül, hascsík, köldökcsík vagy
+                            mellek közötti csík végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Kis terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Hónalj, orca, nyak, bikini, bikinivonal végleges
+                            szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Közepes terület szörtelenítése
+                          </div>
+                          <span class="time-required">30p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Alkar, felkar, mellkas, has, fenék vagy váll
+                            végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Nagy terület szörtelenítése
+                          </div>
+                          <span class="time-required">45p</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            Teljes arc, teljes intim, derék, lábszár, comb vagy
+                            hát végleges szőrtelenítése
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Több terület szörtelenítése
+                          </div>
+                          <span class="time-required">1ó</span>
+                        </div>
+                        <div class="card-title">
+                          <span>
+                            25% egyidejű kedvezmény! Több terület egyidejű
+                            kezelésénél minden 3. terület után egy terület
+                            ajándék!
+                          </span>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="card-header">
+                          <div class="img">
+                            <img
+                              src="./images/no-photo.png"
+                              alt="no photo"
+                              width="50"
+                              height="50"
+                            />
+                          </div>
+                          <div class="header-title">
+                            Teljes test szörtelenítése
+                          </div>
+                          <span class="time-required">2ó</span>
+                        </div>
+                        <div class="card-title">
+                          <span>Akárhány terület egyidejű kezelése</span>
+                        </div>
+                      </div>
+                    </details>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
@@ -2180,6 +2335,51 @@
         <span><small>&copy; Bogy Cosmetics Created by SC</small></span>
       </div>
     </footer>
+    <style>
+      .container {
+        height: 750px;
+        display: flex;
+        justify-content: center;
+
+        .booking-steps {
+          background-color: var(--color-dark-purple);
+
+          .list-item {
+            margin: 2rem;
+            display: flex;
+            align-items: center;
+
+            .step-counter {
+              height: 25px;
+              aspect-ratio: 1;
+              margin-right: 0.5rem;
+              color: #fff;
+              background-color: grey;
+              border-radius: 50%;
+              text-align: center;
+            }
+
+            .step-title {
+              color: grey;
+            }
+
+            &.active {
+              .step-counter {
+                background-color: var(--color-purple);
+              }
+
+              .step-title {
+                color: #fff;
+              }
+            }
+          }
+        }
+        .booking-body {
+          height: 100%;
+          overflow-y: scroll;
+        }
+      }
+    </style>
     <script data-content="price select chooser">
       const radios = document.querySelectorAll(".category");
       const selectes = document.querySelectorAll("select");
