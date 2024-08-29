@@ -235,3 +235,62 @@ main.kozmetika {
 }
 
 /*----- időpont -----*/
+
+.idopont-form {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  height: 750px;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+
+  .booking-steps {
+    background-color: var(--color-dark-purple);
+
+    .list-item {
+      margin: 2rem;
+      display: flex;
+      align-items: center;
+
+      .step-counter {
+        height: 25px;
+        aspect-ratio: 1;
+        margin-right: 0.5rem;
+        color: #fff;
+        background-color: grey;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      .step-title {
+        color: grey;
+      }
+
+      &.active {
+        .step-counter {
+          background-color: var(--color-purple);
+        }
+
+        .step-title {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .booking-body-wrapper {
+    flex: 1;
+
+    .booking-body {
+      height: 100%;
+      overflow-y: auto;
+
+      .booking-body-content details > summary {
+        padding: 0.5rem;
+        border: 3px dashed green;
+        cursor: pointer;
+      }
+    }
+  }
+}
