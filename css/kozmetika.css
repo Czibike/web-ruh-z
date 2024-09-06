@@ -294,3 +294,69 @@ main.kozmetika {
     }
   }
 }
+
+.calendar {
+  width: 50%;
+
+  .calendar-header {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+
+    .btn {
+      height: 25px;
+      aspect-ratio: 1;
+      background-color: var(--color-purple);
+      border: none;
+      border-radius: 50%;
+      font-weight: 500;
+
+      &:hover {
+        color: #fff;
+        background-color: var(--color-dark-purple);
+      }
+    }
+  }
+
+  .days,
+  .dates {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .day {
+    text-align: center;
+  }
+
+  .date {
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    &.active {
+      background-color: green;
+      border-radius: 50%;
+    }
+
+    &.inactive {
+      color: #444444;
+    }
+
+    &:hover::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      aspect-ratio: 1;
+      background-color: var(--color-purple);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+}
+
+.free-times {
+  
+}
