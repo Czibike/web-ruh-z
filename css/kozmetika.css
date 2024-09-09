@@ -295,9 +295,16 @@ main.kozmetika {
   }
 }
 
-.calendar {
-  width: 50%;
+.booking-body-content[data-booking-body="2"] {
+  display: flex;
+  gap: 0.5rem;
 
+  & > * {
+    flex: 1;
+  }
+}
+
+.calendar {
   .calendar-header {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -331,10 +338,11 @@ main.kozmetika {
   }
 
   .date {
-    aspect-ratio: 1;
     position: relative;
     display: grid;
     place-items: center;
+    cursor: pointer;
+    aspect-ratio: 1;
 
     &.active {
       background-color: green;
@@ -358,5 +366,29 @@ main.kozmetika {
 }
 
 .free-times {
-  
+  .free-times-header {
+    text-align: center;
+  }
+
+  .empty {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .time-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-y: auto;
+    scrollbar-width: thin; /* ??? */
+
+    & > .time-available {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      & > * {
+        margin: 0.125rem;
+      }
+    }
+  }
 }
