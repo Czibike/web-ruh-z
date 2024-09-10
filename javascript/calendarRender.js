@@ -4,7 +4,7 @@ let month = date.getMonth();
 
 const day = document.querySelector(".dates");
 const currdate = document.querySelector(".current-date");
-const prenexIcons = document.querySelectorAll(".btn");
+const prenexIcons = document.querySelectorAll(".js-btn");
 
 const months = [
   "Január",
@@ -32,13 +32,14 @@ const manipulate = () => {
   // Get the last date of the previous month
   let monthlastdate = new Date(year, month, 0).getDate();
 
-  console.log(dayone, lastdate, dayend, monthlastdate);
-
   let lit = "";
 
   // Loop to add the last dates of the previous month
   for (let i = dayone; i > 0; i--) {
-    lit += `<li class="date inactive">${monthlastdate - i + 1}</li>`;
+    lit += `<li class="js-btn date inactive" id="prev" 
+              data-current-year="${year}" 
+              data-current-month="${month + 1}" 
+              data-current-day="${i}">${monthlastdate - i + 1}</li>`;
   }
 
   // Loop to add the dates of the current month
@@ -49,12 +50,18 @@ const manipulate = () => {
       year === new Date().getFullYear()
         ? "active"
         : "";
-    lit += `<li class="date ${isToday}">${i}</li>`;
+    lit += `<li class="date ${isToday}" 
+              data-current-year="${year}" 
+              data-current-month="${month + 1}" 
+              data-current-day="${i}">${i}</li>`;
   }
 
   // Loop to add the first dates of the next month
   for (let i = dayend; i < 6; i++) {
-    lit += `<li class="date inactive">${i - dayend + 1}</li>`;
+    lit += `<li class="js-btn date inactive" id="next" 
+              data-current-year="${year}" 
+              data-current-month="${month + 1}" 
+              data-current-day="${i}">${i - dayend + 1}</li>`;
   }
 
   currdate.innerText = `${months[month]} ${year}`;

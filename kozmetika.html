@@ -2032,18 +2032,18 @@
                 </ol>
               </div>
               <div class="booking-body-wrapper">
-                <div class="booking-body" data-pt="2">
+                <div class="booking-body" data-booking-body="2">
                   <div class="booking-body-header">
                     <h3>Dátum és időpont kiválasztása</h3>
                   </div>
-                  <div class="booking-body-content" data-booking-body="2">
+                  <div class="booking-body-content">
                     <div class="calendar">
                       <div class="calendar-header">
-                        <button type="button" class="btn" id="prev">
+                        <button type="button" class="btn js-btn" id="prev">
                           &lt;
                         </button>
                         <h3 class="current-date">Dátum</h3>
-                        <button type="button" class="btn" id="next">
+                        <button type="button" class="btn js-btn" id="next">
                           &gt;
                         </button>
                       </div>
@@ -2068,20 +2068,11 @@
                       <div class="empty active">
                         <span class="time-table-header">Válassz dátumot</span>
                       </div>
-                      <div id="time-table" class="time-table thin-scrollbar">
-                        <script>
-                          let container = document.getElementById("time-table");
-                          let c = "";
-
-                          for (let I = 0; I < 24; I++) {
-                            c += `<div class="time-available">
-                                    <span>8:00</span><span>8:30</span>
-                                  </div>`;
-                          }
-
-                          container.innerHTML = c;
-                        </script>
-                      </div>
+                      <div
+                        id="time-table"
+                        class="time-table thin-scrollbar"
+                      ></div>
+                      <script src="./javascript/freeTimeRender.js"></script>
                     </div>
                   </div>
                 </div>

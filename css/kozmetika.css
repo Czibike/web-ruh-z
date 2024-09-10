@@ -281,21 +281,21 @@ main.kozmetika {
   }
   .booking-body-wrapper {
     flex: 1;
-
-    .booking-body {
-      height: 100%;
-      overflow-y: auto;
-
-      .booking-body-content details > summary {
-        padding: 0.5rem;
-        border: 3px dashed green;
-        cursor: pointer;
-      }
-    }
   }
 }
 
-.booking-body-content[data-booking-body="2"] {
+.booking-body[data-booking-body="2"] {
+  height: 100%;
+  overflow-y: auto;
+
+  .booking-body-content details > summary {
+    padding: 0.5rem;
+    border: 3px dashed green;
+    cursor: pointer;
+  }
+}
+
+.booking-body[data-booking-body="2"] .booking-body-content {
   display: flex;
   gap: 0.5rem;
 
