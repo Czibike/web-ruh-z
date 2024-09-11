@@ -302,96 +302,162 @@ main.kozmetika {
   & > * {
     flex: 1;
   }
-}
 
-.calendar {
-  .calendar-header {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-evenly;
+  .calendar {
+    .calendar-header {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: space-evenly;
 
-    .btn {
-      height: 25px;
+      .btn {
+        height: 25px;
+        aspect-ratio: 1;
+        background-color: var(--color-purple);
+        border: none;
+        border-radius: 50%;
+        font-weight: 500;
+
+        &:hover {
+          color: #fff;
+          background-color: var(--color-dark-purple);
+        }
+      }
+    }
+
+    .days,
+    .dates {
+      padding: 0.5rem;
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+    }
+
+    .day {
+      text-align: center;
+    }
+
+    .date {
+      position: relative;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
       aspect-ratio: 1;
-      background-color: var(--color-purple);
-      border: none;
-      border-radius: 50%;
-      font-weight: 500;
 
-      &:hover {
-        color: #fff;
-        background-color: var(--color-dark-purple);
+      &.active {
+        background-color: green;
+        border-radius: 50%;
+      }
+
+      &.inactive {
+        color: #444444;
+      }
+
+      &:hover::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: var(--color-purple);
+        border-radius: 50%;
+        z-index: -1;
       }
     }
   }
 
-  .days,
-  .dates {
-    padding: 0.5rem;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-  }
-
-  .day {
-    text-align: center;
-  }
-
-  .date {
-    position: relative;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    aspect-ratio: 1;
-
-    &.active {
-      background-color: green;
-      border-radius: 50%;
+  .free-times {
+    .free-times-header {
+      text-align: center;
     }
 
-    &.inactive {
-      color: #444444;
+    .empty {
+      padding: 1.5rem;
+      text-align: center;
     }
 
-    &:hover::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      aspect-ratio: 1;
-      background-color: var(--color-purple);
-      border-radius: 50%;
-      z-index: -1;
+    .time-table {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow-y: auto;
+      scrollbar-width: thin; /* ??? */
+
+      & > .time-available {
+        margin: 0.25rem;
+        border: 1px solid var(--color-purple);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        & > * {
+          margin: 0.125rem;
+        }
+      }
     }
   }
 }
 
-.free-times {
-  .free-times-header {
-    text-align: center;
-  }
+.booking-body[data-booking-body="3"] {
+  height: 96%;
 
-  .empty {
-    padding: 1.5rem;
-    text-align: center;
-  }
+  .booking-body-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-  .time-table {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    overflow-y: auto;
-    scrollbar-width: thin; /* ??? */
+    .inputgroups {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1rem;
 
-    & > .time-available {
-      margin: 0.25rem;
-      border: 1px solid var(--color-purple);
+      .after > label::after {
+        content: "*";
+        color: darkred;
+        padding-inline-start: 0.2rem;
+      }
+
+      .inputgroup {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        input {
+          height: 2rem;
+          padding-left: 0.25rem;
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid var(--color-purple);
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+
+    .buttons {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+      justify-content: space-between;
 
-      & > * {
-        margin: 0.125rem;
+      .button {
+        margin: 1rem 2rem;
+        padding: 0.6rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: capitalize;
+
+        &.back {
+          background-color: transparent;
+          box-shadow: 0 0 5px var(--color-dark-purple);
+        }
+
+        &.forward {
+          color: #f1f1f1;
+          background-color: var(--color-dark-purple);
+          box-shadow: 0 0 10px var(--color-purple);
+        }
       }
     }
   }
