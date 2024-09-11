@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/kozmetika.css" />
+  </head>
+  <body>
+    <div class="booking-body" data-booking-body="2">
+      <div class="booking-body-header">
+        <h3>Dátum és időpont kiválasztása</h3>
+      </div>
+      <div class="booking-body-content">
+        <div class="calendar">
+          <div class="calendar-header">
+            <button type="button" class="btn js-btn" id="prev">&lt;</button>
+            <h3 class="current-date">Dátum</h3>
+            <button type="button" class="btn js-btn" id="next">&gt;</button>
+          </div>
+          <div class="calendar-body">
+            <ul class="days">
+              <li class="day">Vas</li>
+              <li class="day">Hét</li>
+              <li class="day">Ked</li>
+              <li class="day">Sze</li>
+              <li class="day">Csü</li>
+              <li class="day">Pén</li>
+              <li class="day">Szo</li>
+            </ul>
+            <div class="dates" id="dates"></div>
+            <script src="./javascript/calendarRender.js"></script>
+          </div>
+        </div>
+        <div class="free-times">
+          <div class="free-times-header">
+            <h3>Időpontok</h3>
+          </div>
+          <div class="empty active">
+            <span class="time-table-header">Válassz dátumot</span>
+          </div>
+          <div id="time-table" class="time-table thin-scrollbar"></div>
+          <script src="./javascript/freeTimeRender.js"></script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
