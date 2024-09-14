@@ -241,7 +241,7 @@ main.kozmetika {
   justify-content: center;
 }
 .container {
-  height: 750px;
+  height: 800px;
   width: 75%;
   display: flex;
   justify-content: center;
@@ -281,6 +281,47 @@ main.kozmetika {
   }
   .booking-body-wrapper {
     flex: 1;
+
+    .booking-body {
+      height: 100%;
+
+      .booking-body-header {
+        height: 5%;
+      }
+
+      .booking-body-content {
+        height: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .buttons {
+          display: flex;
+          justify-content: space-between;
+
+          .button {
+            margin: 1rem 2rem;
+            padding: 0.6rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            text-transform: capitalize;
+
+            &.back {
+              background-color: transparent;
+              box-shadow: 0 0 5px var(--color-dark-purple);
+            }
+
+            &.forward {
+              color: #f1f1f1;
+              background-color: var(--color-dark-purple);
+              box-shadow: 0 0 10px var(--color-purple);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -296,101 +337,103 @@ main.kozmetika {
 }
 
 .booking-body[data-booking-body="2"] .booking-body-content {
-  display: flex;
-  gap: 0.5rem;
+  .calendar-time {
+    display: flex;
+    gap: 0.5rem;
 
-  & > * {
-    flex: 1;
-  }
+    & > * {
+      flex: 1;
+    }
 
-  .calendar {
-    .calendar-header {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: space-evenly;
+    .calendar {
+      .calendar-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-evenly;
 
-      .btn {
-        height: 25px;
+        .btn {
+          height: 25px;
+          aspect-ratio: 1;
+          background-color: var(--color-purple);
+          border: none;
+          border-radius: 50%;
+          font-weight: 500;
+
+          &:hover {
+            color: #fff;
+            background-color: var(--color-dark-purple);
+          }
+        }
+      }
+
+      .days,
+      .dates {
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+      }
+
+      .day {
+        text-align: center;
+      }
+
+      .date {
+        position: relative;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
         aspect-ratio: 1;
-        background-color: var(--color-purple);
-        border: none;
-        border-radius: 50%;
-        font-weight: 500;
 
-        &:hover {
-          color: #fff;
-          background-color: var(--color-dark-purple);
+        &.active {
+          background-color: green;
+          border-radius: 50%;
+        }
+
+        &.inactive {
+          color: #444444;
+        }
+
+        &:hover::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          aspect-ratio: 1;
+          background-color: var(--color-purple);
+          border-radius: 50%;
+          z-index: -1;
         }
       }
     }
 
-    .days,
-    .dates {
-      padding: 0.5rem;
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-    }
-
-    .day {
-      text-align: center;
-    }
-
-    .date {
-      position: relative;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      aspect-ratio: 1;
-
-      &.active {
-        background-color: green;
-        border-radius: 50%;
+    .free-times {
+      .free-times-header {
+        text-align: center;
       }
 
-      &.inactive {
-        color: #444444;
+      .empty {
+        padding: 1.5rem;
+        text-align: center;
       }
 
-      &:hover::before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        aspect-ratio: 1;
-        background-color: var(--color-purple);
-        border-radius: 50%;
-        z-index: -1;
-      }
-    }
-  }
+      .time-table {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-y: auto;
+        scrollbar-width: thin; /* ??? */
 
-  .free-times {
-    .free-times-header {
-      text-align: center;
-    }
+        & > .time-available {
+          margin: 0.25rem;
+          border: 1px solid var(--color-purple);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
 
-    .empty {
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .time-table {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      overflow-y: auto;
-      scrollbar-width: thin; /* ??? */
-
-      & > .time-available {
-        margin: 0.25rem;
-        border: 1px solid var(--color-purple);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-
-        & > * {
-          margin: 0.125rem;
+          & > * {
+            margin: 0.125rem;
+          }
         }
       }
     }
@@ -398,8 +441,6 @@ main.kozmetika {
 }
 
 .booking-body[data-booking-body="3"] {
-  height: 96%;
-
   .booking-body-content {
     height: 100%;
     display: flex;
@@ -434,35 +475,8 @@ main.kozmetika {
         }
       }
     }
-
-    .buttons {
-      display: flex;
-      justify-content: space-between;
-
-      .button {
-        margin: 1rem 2rem;
-        padding: 0.6rem;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        font-weight: 500;
-        text-transform: capitalize;
-
-        &.back {
-          background-color: transparent;
-          box-shadow: 0 0 5px var(--color-dark-purple);
-        }
-
-        &.forward {
-          color: #f1f1f1;
-          background-color: var(--color-dark-purple);
-          box-shadow: 0 0 10px var(--color-purple);
-        }
-      }
-    }
   }
 }
 
 .booking-body[data-booking-body="4"] .booking-body-content {
-  
 }

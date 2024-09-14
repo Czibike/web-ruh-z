@@ -13,8 +13,8 @@ dates.forEach((btn) => {
 
     for (let i = 0; i < 24; i++) {
       c += `<div class="time-available">
-                <span>8:00</span>
-                <span>8:30</span>
+                <span class="start-time">8:00</span>
+                <span class="end-time">8:30</span>
             </div>`;
     }
     container.innerHTML = c;

@@ -416,7 +416,7 @@ const treatments = {
     },
   ],
 };
-const container = document.getElementById("container")
+const treatmentContainer = document.getElementById("js-details-container")
 
 let data = "";
 
@@ -449,3 +449,5 @@ for (const index in treatments) {
   });
   data += `</details>`
 }
+
+treatmentContainer.innerHTML = data
