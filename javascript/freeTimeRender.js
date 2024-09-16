@@ -12,7 +12,7 @@ dates.forEach((btn) => {
     dateViewer.innerText = `${cYear}-${cMonth}-${cDay}`;
 
     for (let i = 0; i < 24; i++) {
-      c += `<div class="time-available">
+      c += `<div class="time-available" data-time="8:00">
                 <span class="start-time">8:00</span>
                 <span class="end-time">8:30</span>
             </div>`;

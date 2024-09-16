@@ -2032,7 +2032,7 @@
                 </ol>
               </div>
               <div class="booking-body-wrapper">
-                <div class="booking-body " data-booking-body="1">
+                <div class="booking-body" data-booking-body="1">
                   <div class="booking-body-header">
                     <h3>Válaszd ki a kezelést</h3>
                   </div>
@@ -2099,21 +2099,21 @@
                   <div class="booking-body-content">
                     <div class="inputgroups">
                       <div class="inputgroup after">
-                        <label for="surname">Vezetéknéz:</label>
+                        <label for="firstname">Vezetéknév:</label>
+                        <input
+                          type="text"
+                          inputmode="latin-name"
+                          name="firstname"
+                          id="firstname"
+                        />
+                      </div>
+                      <div class="inputgroup after">
+                        <label for="surname">Keresztnév:</label>
                         <input
                           type="text"
                           inputmode="latin-name"
                           name="surname"
                           id="surname"
-                        />
-                      </div>
-                      <div class="inputgroup after">
-                        <label for="lastname">Keresztnév:</label>
-                        <input
-                          type="text"
-                          inputmode="latin-name"
-                          name="lastname"
-                          id="lastname"
                         />
                       </div>
                       <div class="inputgroup after">
@@ -2162,26 +2162,20 @@
                         <span id="js-span-date"></span>
                       </div>
                     </div>
-                    <form action="" method="post" class="form">
-                      <input type="text" name="treatment" id="treatment" />
-                      <input type="text" name="date" id="date" />
-                      <input type="text" name="hour" id="hour" />
-                      <input type="text" name="firstname" id="firstname" />
-                      <input type="text" name="surname" id="surname" />
-                      <input type="text" name="e-mail" id="e-mail" />
-                      <input type="text" name="tel" id="tel" />
-                    </form>
-                    <div class="buttons">
-                      <button type="button" class="button back">vissza</button>
-                      <button type="button" class="button forward">
-                        következő
-                      </button>
-                    </div>
+                      <div class="buttons">
+                        <button type="button" class="button back">
+                          vissza
+                        </button>
+                        <button type="submit" id="submit" class="button forward">
+                          megerősítés
+                        </button>
+                      </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <script src="./javascript/kozmetikaIdoopnt.js"></script>
         </section>
       </section>
     </main>

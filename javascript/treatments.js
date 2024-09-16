@@ -427,7 +427,7 @@ for (const index in treatments) {
   const arr = treatments[index];
   arr.forEach((treatment) => {
     data += `
-    <div class="card">
+    <div  class="card js-treatment" data-treatment="${treatment.headerTitle}">
       <div class="card-header">
         <div class="img">
           <img
