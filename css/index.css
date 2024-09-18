@@ -1,0 +1,48 @@
+.randomByCategories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.randomFromHair,
+.randomFromFace,
+.randomFromSkin,
+.randomFromOther {
+  margin-right: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 1320px) {
+  .randomFromHair,
+  .randomFromFace,
+  .randomFromSkin,
+  .randomFromOther {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .randomFromHair,
+  .randomFromFace,
+  .randomFromSkin,
+  .randomFromOther {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .randomFromHair,
+  .randomFromFace,
+  .randomFromSkin,
+  .randomFromOther {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

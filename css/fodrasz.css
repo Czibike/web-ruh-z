@@ -1,29 +1,3 @@
-/*----- section, -header -----*/
-
-section[id] {
-  --margin: 2rem;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  > * {
-    margin-bottom: 0.5rem;
-  }
-
-  .description {
-    width: 50%;
-    margin-top: 1rem;
-    margin-bottom: var(--margin);
-    text-align: center;
-  }
-}
-
-/*----- End -----*/
-
 main.fodrasz {
   position: relative;
   display: grid;
@@ -36,7 +10,7 @@ main.fodrasz {
 
   .ip-btn {
     padding: 0.5rem;
-    border: 2px solid black;
+    border: 2px solid var(--color-black);
     background: transparent;
     font-size: 1rem;
     text-transform: uppercase;
@@ -100,7 +74,7 @@ main.fodrasz {
       width: 70%;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0px 0px 10px #000000);
+      filter: drop-shadow(0px 0px 10px var(--color-black));
     }
 
     .title {
@@ -113,86 +87,13 @@ main.fodrasz {
   }
 }
 
-.prices .table .thead ul {
-  width: fit-content;
-  margin: 0 auto;
+.small-text {
+  margin: var(--upper-margin) var(--side-margin);
+  text-align: center;
 
-  > li {
-    padding: 1rem;
-    display: inline-block;
-    color: white;
-    background-color: var(--color-dark-purple);
-    border: 2px solid var(--color-purple);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.5s all ease-in-out;
-
-    &:hover {
-      color: black;
-      background-color: var(--color-purple);
-      border: 2px solid var(--color-dark-purple);
-    }
+  & p:not(:only-child):last-child {
+    margin-top: var(--upper-margin);
   }
-}
-
-.prices .table .tbody {
-  --side-margin: 2rem;
-  --upper-margin: 1rem;
-  width: 95%;
-  margin: 3rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  border: 1px solid black;
-
-  .colwrapper {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-
-    .col {
-      flex-grow: 1;
-      margin: var(--upper-margin) var(--side-margin);
-
-      & ul li {
-        div {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-
-          .name {
-            font-weight: bold;
-          }
-
-          .placeholder {
-            flex-grow: 1;
-            border-bottom: 2px dotted green;
-          }
-
-          .price {
-            text-transform: uppercase;
-          }
-        }
-
-        & p {
-          margin-top: calc(var(--upper-margin) / 2);
-          margin-bottom: var(--upper-margin);
-        }
-      }
-    }
-  }
-  .small-text {
-    margin: var(--upper-margin) var(--side-margin);
-    text-align: center;
-
-    & p:not(:only-child):last-child {
-      margin-top: var(--upper-margin);
-    }
-  }
-}
-.none {
-  display: none !important;
 }
 
 .gallery .images {
@@ -202,13 +103,13 @@ main.fodrasz {
   gap: 2rem;
 
   .image-container {
-    border: 1px solid darkgray;
+    border: 1px solid var(--color-lightgray);
 
     & > img {
       min-width: 20vw;
       max-width: 300px;
       margin: 1px;
-      box-shadow: 0 3px 10px #000;
+      box-shadow: 0 3px 10px var(--color-black);
     }
 
     .upper-title-container {
@@ -227,59 +128,43 @@ main.fodrasz {
   margin: 1rem;
 
   .form-and-image {
-    margin-right: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    gap: 1rem;
+    display: flex;
+    justify-content: center;
 
-    .idopont-form {
-      .after > label::after {
-        content: "*";
-        color: darkred;
-        padding-inline-start: 0.2rem;
+    .idopont-form .inputgroup {
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea,
+      button {
+        margin: 0.25rem;
       }
 
-      .inputgroup {
+      & input[type="text"],
+      & input[type="email"],
+      & input[type="tel"] {
+        padding: 0.25rem 0.5rem;
+        border: 1px solid var(--color-black);
+
+        &::placeholder {
+          color: var(--color-darkgray);
+        }
+      }
+
+      .options {
         display: flex;
-        flex-direction: column;
-
-        input,
-        textarea,
-        button {
-          margin: 0.25rem;
-        }
-
-        & input[type="text"],
-        & input[type="email"],
-        & input[type="tel"] {
-          padding: 0.25rem 0.5rem;
-          border: 1px solid black;
-
-          &::placeholder {
-            color: #3f3f3f;
-          }
-        }
-
-        .options {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        .options input[type="radio"],
-        .options input[type="checkbox"] {
-          width: 0.9rem;
-          aspect-ratio: 1;
-          accent-color: var(--color-dark-purple);
-        }
+        flex-wrap: wrap;
       }
-    }
-
-    .image {
-      background-image: url(../images/temlete\ for\ form\ and\ image.png);
-      background-position: center;
-      background-size: cover;
+      .options input[type="radio"],
+      .options input[type="checkbox"] {
+        width: 0.9rem;
+        aspect-ratio: 1;
+        accent-color: var(--color-dark-purple);
+      }
     }
   }
   .alert p {
-    color: darkred;
+    color: var(--color-darkred);
   }
 }

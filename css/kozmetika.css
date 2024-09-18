@@ -20,31 +20,6 @@
   --bg-18: url("../images/kozmetika/17.jpg");
   --bg-19: url("../images/kozmetika/infraszauna.jpg");
 }
-/*----- section, -header -----*/
-
-section[id] {
-  --margin: 2rem;
-  margin-top: var(--margin);
-  margin-bottom: var(--margin);
-}
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  > * {
-    margin-bottom: 0.5rem;
-  }
-
-  .description {
-    width: 50%;
-    margin-top: 1rem;
-    margin-bottom: var(--margin);
-    text-align: center;
-  }
-}
-
-/*----- End -----*/
 
 main.kozmetika {
   position: relative;
@@ -58,7 +33,7 @@ main.kozmetika {
 
   .ip-btn {
     padding: 0.5rem;
-    border: 2px solid black;
+    border: 2px solid var(--color-black);
     background: transparent;
     font-size: 1rem;
     text-transform: uppercase;
@@ -98,7 +73,7 @@ main.kozmetika {
 
     & ul li {
       .list-icon {
-        color: darkred;
+        color: var(--color-darkred);
         font-weight: bold;
       }
     }
@@ -126,8 +101,8 @@ main.kozmetika {
     .red-text {
       display: inline-block;
       margin-bottom: 1rem;
-      color: darkred;
-      border-bottom: 2px solid darkred;
+      color: var(--color-darkred);
+      border-bottom: 2px solid var(--color-darkred);
     }
 
     .category-title {
@@ -140,7 +115,7 @@ main.kozmetika {
   background-color: transparent;
   width: 400px;
   height: 460px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid var(--color-lightgray);
   border-radius: 1px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 
@@ -178,8 +153,8 @@ main.kozmetika {
   align-items: flex-end;
 
   .title-front > span {
-    color: white;
-    background-color: darkred;
+    color: var(--color-white);
+    background-color: var(--color-darkred);
   }
 }
 
@@ -188,7 +163,7 @@ main.kozmetika {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  color: white;
+  color: var(--color-white);
   transform: rotateY(180deg);
 
   .title-back {
@@ -258,14 +233,14 @@ main.kozmetika {
         height: 25px;
         aspect-ratio: 1;
         margin-right: 0.5rem;
-        color: #fff;
-        background-color: grey;
+        color: var(--color-white);
+        background-color: var(--color-gray);
         border-radius: 50%;
         text-align: center;
       }
 
       .step-title {
-        color: grey;
+        color: var(--color-gray);
       }
 
       &.active {
@@ -274,7 +249,7 @@ main.kozmetika {
         }
 
         .step-title {
-          color: #fff;
+          color: var(--color-white);
         }
       }
     }
@@ -314,7 +289,7 @@ main.kozmetika {
             }
 
             &.forward {
-              color: #f1f1f1;
+              color: var(--color-white);
               background-color: var(--color-dark-purple);
               box-shadow: 0 0 10px var(--color-purple);
             }
@@ -331,7 +306,7 @@ main.kozmetika {
 
   .booking-body-content details > summary {
     padding: 0.5rem;
-    border: 3px dashed green;
+    border: 3px dashed var(--color-green);
     cursor: pointer;
   }
 }
@@ -361,7 +336,7 @@ main.kozmetika {
           font-weight: 500;
 
           &:hover {
-            color: #fff;
+            color: var(--color-white);
             background-color: var(--color-dark-purple);
           }
         }
@@ -386,12 +361,12 @@ main.kozmetika {
         aspect-ratio: 1;
 
         &.active {
-          background-color: green;
+          background-color: var(--color-green);
           border-radius: 50%;
         }
 
         &.inactive {
-          color: #444444;
+          color: var(--color-darkgray);
         }
 
         &:hover::before {
@@ -452,12 +427,6 @@ main.kozmetika {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 2rem 1rem;
-
-      .after > label::after {
-        content: "*";
-        color: darkred;
-        padding-inline-start: 0.2rem;
-      }
 
       .inputgroup {
         display: flex;
