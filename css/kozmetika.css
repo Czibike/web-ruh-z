@@ -448,4 +448,10 @@ main.kozmetika {
 }
 
 .booking-body[data-booking-body="4"] .booking-body-content {
+  .booking-datas {
+    margin-top: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

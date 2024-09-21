@@ -1,4 +1,5 @@
 const bookingBodies = document.querySelectorAll("[data-booking-body]");
+const steps = document.querySelectorAll(".list-item");
 const buttons = document.querySelectorAll(".forward");
 const treatmentBtns = document.querySelectorAll(".js-treatment");
 const dateBtns = document.querySelectorAll(".date");
@@ -19,11 +20,23 @@ let telData = "";
 const spanTreatment = document.getElementById("js-span-treatment");
 const spanDate = document.getElementById("js-span-date");
 
+const bookingSteps = () => {
+  for (let i = 0; i < bodies.length; i++) {
+    if (!bodies[i].classList.contains("none")) {
+      steps[i].classList.add("active");
+    }
+    if (bodies[i].classList.contains("none")) {
+      steps[i].classList.remove("active");
+    }
+  }
+};
+
 treatmentBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     treatmentData = btn.getAttribute("data-treatment").valueOf();
     bookingBodies[0].classList.add("none");
     bookingBodies[1].classList.remove("none");
+    bookingSteps();
   });
 });
 
@@ -41,6 +54,7 @@ dateBtns.forEach((btn) => {
         timeData = btn.getAttribute("data-time").valueOf();
         bookingBodies[1].classList.add("none");
         bookingBodies[2].classList.remove("none");
+        bookingSteps();
       });
     });
   });
@@ -56,6 +70,7 @@ buttons.forEach((button) => {
     bookingBodies[2].classList.add("none");
     bookingBodies[3].classList.remove("none");
 
+    bookingSteps();
     finalstep();
   });
 });

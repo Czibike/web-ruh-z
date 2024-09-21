@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bogy Kozmetika</title>
     <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/treatment base.css">
+    <link rel="stylesheet" href="./css/treatment base.css" />
     <link rel="stylesheet" href="./css/kozmetika bg-images.css" />
     <link rel="stylesheet" href="./css/kozmetika.css" />
   </head>
@@ -1992,8 +1992,9 @@
               </div>
             </div>
           </div>
-          <script src="./javascript/Table.js"></script>
+          <script src="./javascript/treatments/Table.js"></script>
         </section>
+        <!-- working booking steps -->
         <section id="idopont" class="idopont">
           <div class="header">
             <div class="company">
@@ -2037,7 +2038,7 @@
                     <h3>Válaszd ki a kezelést</h3>
                   </div>
                   <div id="js-details-container" class="booking-body-content">
-                    <script src="./javascript/treatments.js"></script>
+                    <script src="./javascript/treatments/kozmetikaTreatments.js"></script>
                   </div>
                 </div>
                 <div class="booking-body none" data-booking-body="2">
@@ -2067,7 +2068,7 @@
                             <li class="day">Szo</li>
                           </ul>
                           <div class="dates" id="dates"></div>
-                          <script src="./javascript/calendarRender.js"></script>
+                          <script src="./javascript/treatments/kozmetikaCalendarRender.js"></script>
                         </div>
                       </div>
                       <div class="free-times">
@@ -2081,7 +2082,7 @@
                           id="time-table"
                           class="time-table thin-scrollbar"
                         ></div>
-                        <script src="./javascript/freeTimeRender.js"></script>
+                        <script src="./javascript/treatments/kozmetikaFreeTimeRender.js"></script>
                       </div>
                     </div>
                     <div class="buttons">
@@ -2152,7 +2153,7 @@
                     <h3>Foglalás megerősítése</h3>
                   </div>
                   <div class="booking-body-content">
-                    <div class="bookintg-datas">
+                    <div class="booking-datas">
                       <div class="data">
                         <span>Kezelések:</span>
                         <span id="js-span-treatment"></span>
@@ -2162,20 +2163,18 @@
                         <span id="js-span-date"></span>
                       </div>
                     </div>
-                      <div class="buttons">
-                        <button type="button" class="button back">
-                          vissza
-                        </button>
-                        <button type="submit" id="submit" class="button forward">
-                          megerősítés
-                        </button>
-                      </div>
+                    <div class="buttons">
+                      <button type="button" class="button back">vissza</button>
+                      <button type="submit" id="submit" class="button forward">
+                        megerősítés
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <script src="./javascript/kozmetikaIdoopnt.js"></script>
+          <script src="./javascript/treatments/kozmetikaIdopnt.js"></script>
         </section>
       </section>
     </main>
