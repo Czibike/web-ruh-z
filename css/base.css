@@ -65,6 +65,20 @@ header {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 1084px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .logo{
+      margin-right: auto;
+    }
+    #searchBar {
+      order: 3;
+    }
+  }
+}
+
 header .logo {
   display: flex;
 

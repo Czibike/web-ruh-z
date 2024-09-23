@@ -1,3 +1,7 @@
+* {
+  border: 0.5px solid black;
+}
+
 /*----- section, -header -----*/
 
 section[id] {
@@ -23,6 +27,31 @@ section[id] {
 }
 
 /*----- End -----*/
+
+.navbar {
+  height: auto;
+  margin: 1rem;
+
+  .ip-btn {
+    padding: 0.5rem;
+    border: 2px solid var(--color-black);
+    background: transparent;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-wrap: wrap;
+  }
+}
+.navbar,
+.navbar nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+
+  & > li {
+    margin: 0.5rem;
+  }
+}
 
 .prices .table .thead ul {
   width: fit-content;
@@ -92,6 +121,20 @@ section[id] {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1195px) {
+  .prices .table .tbody {
+    /* --side-margin: 5rem; */
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .prices .table .tbody .colwrapper {
+    padding: 1rem;
+    flex-direction: column;
   }
 }
 

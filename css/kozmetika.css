@@ -27,29 +27,6 @@ main.kozmetika {
   grid-template-columns: minmax(230px, 15%) 1fr;
 }
 
-.navbar {
-  height: auto;
-  margin: 1rem;
-
-  .ip-btn {
-    padding: 0.5rem;
-    border: 2px solid var(--color-black);
-    background: transparent;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
-}
-.navbar,
-.navbar nav ul {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-
-  & > li {
-    margin: 0.5rem;
-  }
-}
-
 .sort-info {
   --margin: 5rem;
   margin-top: var(--margin);
