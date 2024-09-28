@@ -20,17 +20,6 @@ let telData = "";
 const spanTreatment = document.getElementById("js-span-treatment");
 const spanDate = document.getElementById("js-span-date");
 
-const bookingSteps = () => {
-  for (let i = 0; i < bodies.length; i++) {
-    if (!bodies[i].classList.contains("none")) {
-      steps[i].classList.add("active");
-    }
-    if (bodies[i].classList.contains("none")) {
-      steps[i].classList.remove("active");
-    }
-  }
-};
-
 treatmentBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     treatmentData = btn.getAttribute("data-treatment").valueOf();
@@ -74,6 +63,17 @@ buttons.forEach((button) => {
     finalstep();
   });
 });
+
+const bookingSteps = () => {
+  for (let i = 0; i < bookingBodies.length; i++) {
+    if (!bookingBodies[i].classList.contains("none")) {
+      steps[i].classList.add("active");
+    }
+    if (bookingBodies[i].classList.contains("none")) {
+      steps[i].classList.remove("active");
+    }
+  }
+};
 
 const finalstep = () => {
   if (!bookingBodies[3].classList.contains("none")) {
