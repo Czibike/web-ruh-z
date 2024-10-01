@@ -91,21 +91,22 @@
         <h2 class="cart-header">
           <span>Kosár tartalma</span>
         </h2>
-        <div class="cart-table">
-          <div class="thead">
-            <span>Kép</span>
-            <span>név</span>
-            <span>mennyiség</span>
-            <span>nettó ár</span>
-            <span>összes ár</span>
-          </div>
-          <div class="tbody">
-            <div class="item-wrapper"></div>
-            <script>
-              const c = document.querySelector(".item-wrapper");
+        <div class="cart-group">
+          <div class="cart-table">
+            <div class="thead">
+              <span>Kép</span>
+              <span>név</span>
+              <span>mennyiség</span>
+              <span>nettó ár</span>
+              <span>összes ár</span>
+            </div>
+            <div class="tbody">
+              <div class="item-wrapper"></div>
+              <script>
+                const c = document.querySelector(".item-wrapper");
 
-              for (let i = 0; i < 4; i++) {
-                c.innerHTML += `
+                for (let i = 0; i < 4; i++) {
+                  c.innerHTML += `
                   <div class="item">
                     <div class="item-img center">
                       <img src="./images/borotva.webp" alt="cart-item" />
@@ -147,66 +148,67 @@
                     </div>
                   </div>
                 `;
-              }
-            </script>
+                }
+              </script>
+            </div>
           </div>
-        </div>
-        <div class="cart-bottom">
-          <div class="panels-total">
-            <div class="cart-panels">
-              <h3 class="title">Mit szeretnél csinálni?</h3>
-              <div class="panel-group">
-                <details>
-                  <summary>Kupon kód használata</summary>
-                  <label for="input-coupon">Írd be a kupon kódot</label>
-                  <div class="input-group">
-                    <input type="text" name="coupon" id="input-coupon">
-                    <span>
-                      <input type="button" value="kupon aktiválása">
-                    </span>
-                  </div>
-                </details>
-                <details>
-                  <summary>Szállítási díj becslése</summary>
-                  <p></p>
-                </details>
+          <div class="cart-bottom">
+            <div class="panels-total">
+              <div class="cart-panels">
+                <h3 class="title">Mit szeretnél csinálni?</h3>
+                <div class="panel-group">
+                  <details open>
+                    <summary>Kupon kód használata</summary>
+                    <label for="input-coupon">Írd be a kupon kódot</label>
+                    <div class="input-group">
+                      <input type="text" name="coupon" id="input-coupon" value="Írd be a kupon kódot" />
+                      <span>
+                        <input type="button" value="kupon aktiválása" />
+                      </span>
+                    </div>
+                  </details>
+                  <details>
+                    <summary>Szállítási díj becslése</summary>
+                    <p></p>
+                  </details>
+                </div>
               </div>
+              <table class="cart-total">
+                <tbody>
+                  <tr>
+                    <td class="text">
+                      <strong>Teljes nettó</strong>
+                    </td>
+                    <td class="price">
+                      <strong></strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text">
+                      <strong>ÁFA (27%)</strong>
+                    </td>
+                    <td class="price">
+                      <strong></strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text">
+                      <strong>Összes</strong>
+                    </td>
+                    <td class="price">
+                      <strong></strong>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <table class="cart-total">
-              <tbody>
-                <tr>
-                  <td class="text">
-                    <strong>Teljes nettó</strong>
-                  </td>
-                  <td class="price">
-                    <strong></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text">
-                    <strong>ÁFA (27%)</strong>
-                  </td>
-                  <td class="price">
-                    <strong></strong>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="text">
-                    <strong>Összes</strong>
-                  </td>
-                  <td class="price">
-                    <strong></strong>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="buttons">
-            <div class="btn left continue">
-              <a href="./index.html"><span>Vásárlás folytatása</span></a>
-            </div>
-            <div class="btn right checkout">
-              <a href="#"><span>Pénztár</span></a>
+            <div class="buttons">
+              <div class="btn left continue">
+                <a href="./index.html"><span>Vásárlás folytatása</span></a>
+              </div>
+              <div class="btn right checkout">
+                <a href="#"><span>Pénztár</span></a>
+              </div>
             </div>
           </div>
         </div>

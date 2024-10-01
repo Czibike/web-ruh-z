@@ -3,6 +3,10 @@
   margin-right: 3rem;
 }
 
+.cart-group {
+  display: flex;
+}
+
 .thead {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -81,4 +85,41 @@
       border-radius: 3px;
     }
   }
+}
+
+.cart-bottom .cart-panels {
+  .title {
+    margin-bottom: 1.5rem;
+  }
+
+  .panel-group {
+    & details {
+      min-width: 300px;
+
+      & > summary {
+        padding: 0.25rem;
+        border-radius: 8px;
+        cursor: pointer;
+
+        &::after {
+          content: "\02795"; /* + */
+          margin-right: 0.5rem;
+          font-size: 1rem;
+          float: right;
+        }
+      }
+
+      &[open] summary {
+        border-radius: 8px 8px 4px 4px;
+
+        &::after {
+          content: "\02796"; /* - */
+        }
+      }
+    }
+  }
+}
+
+.panel-group .input-group {
+  display: flex;
 }
