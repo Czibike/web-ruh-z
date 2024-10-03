@@ -259,6 +259,10 @@ header .icons {
   }
 }
 
+.none {
+  display: none !important;
+}
+
 footer {
   height: 50px;
   display: flex;

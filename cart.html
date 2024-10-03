@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/cart.css" />
   </head>
@@ -79,9 +80,15 @@
       </div>
     </header>
 
-    <!--let link = document.querySelector(".js-link");
-    link.setAttribute("href", "product/borotva")-->
-
+    <!-- if cart is EMPTY -->
+    <!-- product generator -->
+    <!-- Áfa calcolator -->
+    <!-- tax calculator HTML, JS -->
+    <!-- side product section HTML, JS
+          - legutóbb MT
+          - legtöbbet MT
+          - legtöbbet EA -->
+    <!-- cart-bottom inputs styles -->
     <main>
       <section class="sidebar-wrapper">
         <div class="sideBar"></div>
@@ -91,6 +98,10 @@
         <h2 class="cart-header">
           <span>Kosár tartalma</span>
         </h2>
+        <div class="cart-group-empty none">
+          <p>A kosár üres!</p>
+          <a href="./index.html">Vásárlás folytatása</a>
+        </div>
         <div class="cart-group">
           <div class="cart-table">
             <div class="thead">
@@ -161,13 +172,16 @@
                     <summary>Kupon kód használata</summary>
                     <label for="input-coupon">Írd be a kupon kódot</label>
                     <div class="input-group">
-                      <input type="text" name="coupon" id="input-coupon" value="Írd be a kupon kódot" />
-                      <span>
-                        <input type="button" value="kupon aktiválása" />
-                      </span>
+                      <input
+                        type="text"
+                        name="coupon"
+                        id="input-coupon"
+                        value="Írd be a kupon kódot"
+                      />
+                      <input type="button" value="kupon aktiválása" />
                     </div>
                   </details>
-                  <details>
+                  <details open>
                     <summary>Szállítási díj becslése</summary>
                     <p></p>
                   </details>
@@ -180,7 +194,7 @@
                       <strong>Teljes nettó</strong>
                     </td>
                     <td class="price">
-                      <strong></strong>
+                      <strong>4000Ft</strong>
                     </td>
                   </tr>
                   <tr>
@@ -188,7 +202,7 @@
                       <strong>ÁFA (27%)</strong>
                     </td>
                     <td class="price">
-                      <strong></strong>
+                      <strong>4000Ft</strong>
                     </td>
                   </tr>
                   <tr>
@@ -196,19 +210,19 @@
                       <strong>Összes</strong>
                     </td>
                     <td class="price">
-                      <strong></strong>
+                      <strong>8000Ft</strong>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div class="buttons">
-              <div class="btn left continue">
-                <a href="./index.html"><span>Vásárlás folytatása</span></a>
-              </div>
-              <div class="btn right checkout">
-                <a href="#"><span>Pénztár</span></a>
-              </div>
+              <a href="./index.html" class="btn left continue">
+                <span>Vásárlás folytatása</span>
+              </a>
+              <a href="#" class="btn right checkout">
+                <span>Pénztár</span>
+              </a>
             </div>
           </div>
         </div>

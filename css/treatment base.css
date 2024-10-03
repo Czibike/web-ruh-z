@@ -134,10 +134,6 @@ section[id] {
   }
 }
 
-.none {
-  display: none !important;
-}
-
 .after > label::after {
   content: "*";
   color: var(--color-darkred);
