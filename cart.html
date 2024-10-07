@@ -80,7 +80,6 @@
       </div>
     </header>
 
-    <!-- if cart is EMPTY -->
     <!-- product generator -->
     <!-- Áfa calcolator -->
     <!-- tax calculator HTML, JS -->
@@ -89,6 +88,7 @@
           - legtöbbet MT
           - legtöbbet EA -->
     <!-- cart-bottom inputs styles -->
+    <!-- cart item quantity counter JS -->
     <main>
       <section class="sidebar-wrapper">
         <div class="sideBar"></div>
@@ -98,11 +98,11 @@
         <h2 class="cart-header">
           <span>Kosár tartalma</span>
         </h2>
-        <div class="cart-group-empty none">
+        <div class="cart-group-empty">
           <p>A kosár üres!</p>
           <a href="./index.html">Vásárlás folytatása</a>
         </div>
-        <div class="cart-group">
+        <div class="cart-group none">
           <div class="cart-table">
             <div class="thead">
               <span>Kép</span>
@@ -226,6 +226,7 @@
             </div>
           </div>
         </div>
+        <script src="./javascript/cart/cart.js"></script>
       </section>
     </main>
     <footer>
