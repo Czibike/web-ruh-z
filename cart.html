@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
-    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/cart.css" />
   </head>
@@ -80,7 +80,6 @@
       </div>
     </header>
 
-    <!-- product generator -->
     <!-- Áfa calcolator -->
     <!-- tax calculator HTML, JS -->
     <!-- side product section HTML, JS
@@ -102,7 +101,7 @@
           <p>A kosár üres!</p>
           <a href="./index.html">Vásárlás folytatása</a>
         </div>
-        <div class="cart-group none">
+        <div class="cart-group">
           <div class="cart-table">
             <div class="thead">
               <span>Kép</span>
@@ -113,56 +112,9 @@
             </div>
             <div class="tbody">
               <div class="item-wrapper"></div>
-              <script>
-                const c = document.querySelector(".item-wrapper");
-
-                for (let i = 0; i < 4; i++) {
-                  c.innerHTML += `
-                  <div class="item">
-                    <div class="item-img center">
-                      <img src="./images/borotva.webp" alt="cart-item" />
-                    </div>
-                    <div class="item-name center">
-                      <a href="#" class="js-link">
-                        <h3 class="js-item-name">borotva</h3>
-                      </a>
-                      <br>
-                      <span>Kapott hűségpontok: 10</span>
-                    </div>
-                    <div class="quantity">
-                      <div class="stepper">
-                        <input type="number" value="1" />
-                        <div class="stepper-btns">
-                          <button type="button">
-                            <span class="material-symbols-outlined">
-                              keyboard_arrow_up
-                            </span>
-                          </button>
-                          <button type="button">
-                            <span class="material-symbols-outlined">
-                              keyboard_arrow_down
-                            </span>
-                          </button>
-                        </div>
-                      </div>
-                      <div class="delete-btn">
-                        <button type="button">
-                          <span class="material-symbols-outlined"> close </span>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="unit-price center">
-                      <span class="js-unit-price">1000 Ft</span>
-                    </div>
-                    <div class="total-price center">
-                      <span class="js-total-price">2000 Ft</span>
-                    </div>
-                  </div>
-                `;
-                }
-              </script>
             </div>
           </div>
+          <script src="./javascript/cart/cart.js"></script>
           <div class="cart-bottom">
             <div class="panels-total">
               <div class="cart-panels">
@@ -226,7 +178,6 @@
             </div>
           </div>
         </div>
-        <script src="./javascript/cart/cart.js"></script>
       </section>
     </main>
     <footer>
