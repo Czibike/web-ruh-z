@@ -48,6 +48,7 @@ window.onload = onLoads();
 
 const plusBtn = document.querySelectorAll(".plus");
 const minusBtn = document.querySelectorAll(".minus");
+const inputs = document.querySelectorAll(".input");
 let itemTemplete = "";
 
 function renderItems() {
@@ -69,23 +70,23 @@ function renderItems() {
         </div>
         <div class="quantity">
           <div class="stepper">
-            <input type="number" value="${item.quantity}"  data-item-id=" ${item.itemId}" />
+            <input type="number" value="${item.quantity}" class="input" data-item-id=" ${item.itemId}" />
             <div class="stepper-btns">
-              <button type="button" class="plus" data-item-id="${item.itemId}">
-                <span class="material-symbols-outlined">
+              <button type="button">
+                <span class="material-symbols-outlined plus" data-item-id="${item.itemId}">
                   keyboard_arrow_up
                 </span>
               </button>
-              <button type="button" class="minus" data-item-id="${item.itemId}">
-                <span class="material-symbols-outlined">
+              <button type="button">
+                <span class="material-symbols-outlined minus" data-item-id="${item.itemId}">
                   keyboard_arrow_down
                 </span>
               </button>
             </div>
           </div>
           <div class="delete-btn">
-            <button type="button" class="delete" data-item-id="${item.itemId}">
-              <span class="material-symbols-outlined"> close </span>
+            <button type="button">
+              <span class="material-symbols-outlined delete" data-item-id="${item.itemId}"> close </span>
             </button>
           </div>
         </div>
@@ -105,7 +106,7 @@ function renderItems() {
 
   for (const btn of deleteBtn) {
     btn.addEventListener("click", (e) => {
-      let id = Number(e.target.attributes[2].value);
+      let id = Number(e.target.attributes[1].value);
       let foundId;
 
       for (let i = 0; i < cart.length; i++) {
@@ -121,3 +122,33 @@ function renderItems() {
     });
   }
 }
+
+plusBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let btnId = Number(e.target.attributes[1].value);
+
+    for (const input of inputs) {
+      let inputId = Number(input.getAttribute("data-item-id").valueOf());
+
+      if (inputId === btnId) {
+        input.value++;
+        break;
+      }
+    }
+  });
+});
+
+minusBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    let btnId = Number(e.target.attributes[1].value);
+
+    for (const input of inputs) {
+      let inputId = Number(input.getAttribute("data-item-id").valueOf());
+
+      if (inputId === btnId) {
+        input.value--;
+        break;
+      }
+    }
+  });
+});

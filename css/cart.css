@@ -93,8 +93,7 @@
         > button {
           height: var(--height_2);
           outline: none;
-          display: grid;
-          place-items: center;
+          display: flex;
         }
       }
     }
@@ -104,6 +103,13 @@
       background-color: var(--color-darkred);
       border: none;
       border-radius: 3px;
+
+      > span {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+      }
     }
   }
 }
