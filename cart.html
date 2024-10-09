@@ -81,7 +81,7 @@
     </header>
 
     <!-- Áfa calcolator -->
-    <!-- tax calculator HTML, JS -->
+    <!-- tax calculator JS -->
     <!-- side product section HTML, JS
           - legutóbb MT
           - legtöbbet MT
@@ -135,6 +135,72 @@
                   <details open>
                     <summary>Szállítási díj becslése</summary>
                     <p></p>
+                    <div class="inputgroup">
+                      <label for="input-country" class="after">Ország</label>
+                      <select
+                        name="country_id"
+                        id="input-country"
+                        class="form-control"
+                      >
+                        <option value="0" selected="selected">
+                          --- Please Select ---
+                        </option>
+                        <option value="33">Bulgária</option>
+                        <option value="53">Horváthország</option>
+                        <option value="56">Csehország</option>
+                        <option value="57">Dánia</option>
+                        <option value="72">Finnország</option>
+                        <option value="74">Franciaország</option>
+                        <option value="84">Görögország</option>
+                        <option value="97">Magyarország</option>
+                        <option value="103">Írország</option>
+                        <option value="105">Olaszország</option>
+                        <option value="123">Litvánia</option>
+                        <option value="150">Hollandia</option>
+                        <option value="170">Lengyelország</option>
+                        <option value="171">Portugália</option>
+                        <option value="175">Románia</option>
+                        <option value="189">Szlovákia</option>
+                        <option value="190">Slovénia</option>
+                        <option value="203">Svédország</option>
+                      </select>
+                    </div>
+                    <div class="inputgroup">
+                      <label for="input-zone" class="after">Menye</label>
+                      <select
+                        name="zone_id"
+                        id="input-zone"
+                        class="form-control"
+                      >
+                        <option value="">--- Please Select ---</option>
+                        <option value="4239">Bács-Kiskun</option>
+                        <option value="4240">Baranya</option>
+                        <option value="4241">Békés</option>
+                        <option value="4242">Borsod-Abaúj- Zemplén</option>
+                        <option value="4258">Budapest</option>
+                        <option value="4243">Csongrád</option>
+                        <option value="4244">Fejér</option>
+                        <option value="4245">Győr-Moson- Sopron</option>
+                        <option value="4246">Hajdú-Bihar</option>
+                        <option value="4247">Heves</option>
+                        <option value="4248">Jász-Nagykun- Szolnok</option>
+                        <option value="4249">Komárom- Esztergom</option>
+                        <option value="4250">Nógrád</option>
+                        <option value="4251">Pest</option>
+                        <option value="4252">Somogy</option>
+                        <option value="4253">Szabolcs-Szatmár- Bereg</option>
+                        <option value="4254">Tolna</option>
+                        <option value="4255">Vas</option>
+                        <option value="4256">Veszprém</option>
+                        <option value="4257">Zala</option>
+                      </select>
+                    </div>
+                    <div class="inputgroup">
+                      <label for="post-code" class="after">Irányítószám</label>
+                    </div>
+                    <div class="inputgroup">
+                      <button type="button"> Szállítási díj kalkulálása</button>
+                    </div>
                   </details>
                 </div>
               </div>
