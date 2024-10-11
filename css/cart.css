@@ -10,7 +10,7 @@
   }
 
   a {
-    padding: .5rem;
+    padding: 0.5rem;
     background-color: var(--bs-warning);
     border-radius: var(--bs-border-radius-sm);
     display: flex;
@@ -41,6 +41,10 @@
   margin-bottom: 0.5rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+
+  > * {
+    padding: .5rem;
+  }
 
   .item-img {
     display: grid;
@@ -84,6 +88,7 @@
           -webkit-appearance: none;
         }
       }
+
       .stepper-btns {
         display: flex;
         flex-direction: column;
@@ -97,6 +102,7 @@
         }
       }
     }
+
     .delete-btn button {
       height: var(--height);
       width: var(--height);
@@ -124,6 +130,13 @@
     }
 
     .panel-group {
+      button,
+      input {
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 5px;
+      }
+
       & details {
         min-width: 300px;
 
@@ -149,59 +162,89 @@
         }
       }
 
-      label.after::after {
-        content: "*";
-        color: var(--color-darkred);
-        padding-inline-start: 0.2rem;
+      & details:nth-child(1) .input-group {
+        height: 3.5rem;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        > input {
+          border-color: var(--color-dark-purple);
+        }
+
+        > input[type="text"] {
+          width: 140px;
+          padding: 0.4rem;
+        }
+
+        > input[type="button"] {
+          height: 100%;
+          width: 120px;
+          background-color: var(--bs-teal);
+          border-color: var(--bs-success);
+        }
       }
 
-      select {
-        display: block;
-        width: 90%;
-        margin: 1rem;
-      
-        --arrow-bg: rgba(255, 255, 255, 0.3);
-        --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
-        --option-bg: #60c;
-        --select-bg: rgba(255, 255, 255, 0.2);
-      
-        /* Reset */
-        appearance: none;
-        border: 0;
-        outline: 0;
-        font: inherit;
-        /* Personalize */
-        /* width: 20rem; */
-        padding: 1rem 4rem 1rem 1rem;
-        background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
-          linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
-        color: white;
-        border-radius: 0.25em;
-        box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-      
-        & option {
-          color: inherit;
-          background-color: var(--option-bg);
+      & details:nth-child(2) {
+        & label.after::after {
+          content: "*";
+          color: var(--color-darkred);
+          padding-inline-start: 0.2rem;
+        }
+
+        & select {
+          display: block;
+          width: 90%;
+          margin: 1rem 0;
+
+          --arrow-bg: rgba(255, 255, 255, 0.3);
+          --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+          --option-bg: #60c;
+          --select-bg: rgba(255, 255, 255, 0.2);
+
+          /* Reset */
+          appearance: none;
+          border: 0;
+          outline: 0;
+          font: inherit;
+          /* Personalize */
+          /* width: 20rem; */
+          padding: 1rem 4rem 1rem 1rem;
+          background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+            linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+          color: white;
+          border-radius: 0.25em;
+          box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+          cursor: pointer;
+
+          & option {
+            color: inherit;
+            background-color: var(--option-bg);
+          }
+        }
+
+        & label.after ~ input {
+          height: 2.2rem;
+          width: 100%;
+          margin: 0.5rem 0;
+          padding: 0.5rem;
+          border-color: var(--color-dark-purple);
+          font-size: 14px;
+        }
+
+        .input-group:last-child {
+          padding: 1rem 0;
+
+          & button {
+            width: 100%;
+            padding: 0.75rem 0.5rem;
+            background-color: var(--bs-teal);
+            border-color: var(--bs-success);
+            font-size: 15px;
+          }
         }
       }
     }
-  }
-}
-
-.panel-group .input-group {
-  height: 3.5rem;
-  padding: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-
-  > input[type="text"] {
-    width: 140px;
-  }
-
-  > input[type="button"] {
-    height: 100%;
-    width: 120px;
   }
 }
 
