@@ -43,7 +43,7 @@
   grid-template-columns: repeat(5, 1fr);
 
   > * {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .item-img {
@@ -297,6 +297,65 @@
 
     span {
       color: var(--color-white);
+    }
+  }
+}
+
+.modal {
+  margin: auto;
+  margin-top: 15vh;
+  color: var(--bs-body-color);
+  background-color: var(--bs-tertiary-bg);
+
+  &::backdrop {
+    background-image: linear-gradient(
+      45deg,
+      magenta,
+      rebeccapurple,
+      dodgerblue,
+      green
+    );
+    opacity: 0.75;
+  }
+
+  .modal-header {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .modal-body {
+    padding: 0 0.5rem;
+
+    .radio {
+      padding-left: .25rem;
+    }
+  }
+
+  .modal-footer {
+    padding: 0.5rem;
+
+    > button {
+      margin-right: 0.5rem;
+      padding: 0.25rem;
+      border-radius: var(--bs-border-radius-sm);
+      font-weight: bold;
+      box-shadow: var(--bs-box-shadow-lg);
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: var(--bs-box-shadow-inset);
+      }
+    }
+
+    > button:first-child {
+      color: var(--bs-danger-text-emphasis);
+      background-color: var(--bs-danger);
+      border: 2px solid var(--bs-danger);
+    }
+
+    > button:last-child {
+      color: var(--bs-success-text-emphasis);
+      background-color: var(--bs-success);
+      border: 2px solid var(--bs-success);
     }
   }
 }
