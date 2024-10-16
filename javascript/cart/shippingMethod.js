@@ -1,21 +1,42 @@
 const modalOpener = document.getElementById("openModal");
 const modalCloser = document.getElementById("closeModal");
 const modalCloserWData = document.getElementById("closeModalWData");
+const warningSection = document.querySelector(".js-warning");
 const radios = document.querySelectorAll(".radio-input");
 const modal = document.getElementById("modal");
 const deliverInput = document.querySelector(".deliverJs");
 let delivererArr = [];
 
-const setDeliver = () => {
-  if (delivererArr.length != 0) {
-    deliverInput.innerHTML = `
+const setDeliver = (arr) => {
+  deliverInput.innerHTML = `
       <td class="text">
-        <strong>${delivererArr[0]}</strong>
+        <strong>${arr[0]}</strong>
       </td>
       <td class="price">
-        <strong>${delivererArr[1]}Ft</strong>
+        <strong>${arr[1]}Ft</strong>
       </td>
     `;
+  modal.close();
+};
+
+const warningRender = () => {
+  warningSection.style.display = "flex";
+  warningSection.innerHTML = `
+    <p>Kötelező választani egyet!</p>
+    <button type="button" class="warning-remove">x</button>`;
+
+  const remove = document.querySelector(".warning-remove");
+  remove.addEventListener("click", () => {
+    warningSection.style.display = "none";
+  });
+};
+
+const delivererValidate = (data) => {
+  if (data != "") {
+    let arr = data.split("@");
+    return setDeliver(arr);
+  } else {
+    return warningRender();
   }
 };
 
@@ -37,8 +58,5 @@ modalCloserWData.addEventListener("click", (e) => {
     }
   });
 
-  let deliverer = e.target.value;
-  delivererArr = deliverer.split("@");
-  setDeliver();
-  modal.close();
+  delivererValidate(e.target.value);
 });
