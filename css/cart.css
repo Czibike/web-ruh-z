@@ -162,26 +162,48 @@
         }
       }
 
-      & details:nth-child(1) .input-group {
-        height: 3.5rem;
-        padding: 0.5rem;
-        display: flex;
-        justify-content: space-between;
-
-        > input {
-          border-color: var(--color-dark-purple);
+      & details:nth-child(1) {
+        .warning {
+          padding: 0.25rem;
+          color: var(--bs-dark);
+          background-color: var(--bs-danger);
+          border: 2px solid var(--color-darkred);
+          border-radius: var(--bs-border-radius-sm);
+          display: none;
+          justify-content: space-between;
+    
+          & button {
+            padding: 0 0.25rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: var(--bs-dark);
+            background-color: transparent;
+            border: none;
+            outline: none;
+          }
         }
 
-        > input[type="text"] {
-          width: 140px;
-          padding: 0.4rem;
-        }
+        .input-group {
+          height: 3.5rem;
+          padding: 0.5rem;
+          display: flex;
+          justify-content: space-between;
 
-        > input[type="button"] {
-          height: 100%;
-          width: 120px;
-          background-color: var(--bs-teal);
-          border-color: var(--bs-success);
+          > input {
+            border-color: var(--color-dark-purple);
+          }
+
+          > input[type="text"] {
+            width: 140px;
+            padding: 0.4rem;
+          }
+
+          > input[type="button"] {
+            height: 100%;
+            width: 120px;
+            background-color: var(--bs-teal);
+            border-color: var(--bs-success);
+          }
         }
       }
 

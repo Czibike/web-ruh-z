@@ -1,7 +1,7 @@
 const modalOpener = document.getElementById("openModal");
 const modalCloser = document.getElementById("closeModal");
 const modalCloserWData = document.getElementById("closeModalWData");
-const warningSection = document.querySelector(".js-warning");
+const warningModalSection = document.querySelector(".js-modal-warning");
 const radios = document.querySelectorAll(".radio-input");
 const modal = document.getElementById("modal");
 const deliverInput = document.querySelector(".deliverJs");
@@ -19,15 +19,15 @@ const setDeliver = (arr) => {
   modal.close();
 };
 
-const warningRender = () => {
-  warningSection.style.display = "flex";
-  warningSection.innerHTML = `
+const warningModalRender = () => {
+  warningModalSection.style.display = "flex";
+  warningModalSection.innerHTML = `
     <p>Kötelező választani egyet!</p>
     <button type="button" class="warning-remove">x</button>`;
 
   const remove = document.querySelector(".warning-remove");
   remove.addEventListener("click", () => {
-    warningSection.style.display = "none";
+    warningModalSection.style.display = "none";
   });
 };
 
@@ -36,7 +36,7 @@ const delivererValidate = (data) => {
     let arr = data.split("@");
     return setDeliver(arr);
   } else {
-    return warningRender();
+    return warningModalRender();
   }
 };
 

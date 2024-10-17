@@ -121,6 +121,7 @@
                   <details>
                     <summary>Kupon kód használata</summary>
                     <label for="input-coupon">Írd be a kupon kódot</label>
+                    <div class="warning js-coupon-warning"></div>
                     <div class="input-group">
                       <input
                         type="text"
@@ -128,7 +129,11 @@
                         id="input-coupon"
                         placeholder="Írd be a kupon kódot"
                       />
-                      <input type="button" value="kupon aktiválása" />
+                      <input
+                        type="button"
+                        id="activate-coupon"
+                        value="kupon aktiválása"
+                      />
                     </div>
                   </details>
                   <details>
@@ -222,6 +227,7 @@
                       <strong>4000Ft</strong>
                     </td>
                   </tr>
+                  <tr class="couponJs"></tr>
                   <tr class="deliverJs"></tr>
                   <tr>
                     <td class="text">
@@ -241,6 +247,7 @@
                   </tr>
                 </tbody>
               </table>
+              <script src="./javascript/cart/couponCalculator.js"></script>
             </div>
             <div class="buttons">
               <a href="./index.html" class="btn left continue">
@@ -263,7 +270,7 @@
               </h3>
             </div>
             <div class="modal-body">
-              <div class="warning js-warning"></div>
+              <div class="warning js-modal-warning"></div>
               <p>Szállítási lehetőségek</p>
               <div class="radio">
                 <label>
