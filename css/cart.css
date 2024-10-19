@@ -1,4 +1,4 @@
-.content-wrapper {
+.cart-container {
   margin-left: 3rem;
   margin-right: 3rem;
 }
@@ -171,7 +171,7 @@
           border-radius: var(--bs-border-radius-sm);
           display: none;
           justify-content: space-between;
-    
+
           & button {
             padding: 0 0.25rem;
             font-size: 1.1rem;
