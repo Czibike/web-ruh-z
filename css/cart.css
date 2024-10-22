@@ -401,3 +401,90 @@
     }
   }
 }
+
+.side-products {
+  background-color: var(--color-purple);
+
+  > ul.nav {
+    display: flex;
+
+    > li {
+      padding: 0.5rem;
+
+      > a {
+        padding-bottom: 0.125rem;
+        color: var(--color-white);
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+
+  > .side-products-container .container {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .card {
+      margin-right: 0.5rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: unset;
+      background-color: var(--bg-color);
+      display: flex;
+
+      .image {
+        width: 30%;
+
+        & a {
+          width: 100%;
+          display: flex;
+
+          & img {
+            width: 100%;
+          }
+        }
+      }
+
+      .caption {
+        width: 75%;
+        padding-left: 0.5rem;
+
+        > * {
+          margin-bottom: 2px;
+        }
+
+        .name a {
+          color: var(--color-black);
+        }
+
+        .rating .rating-stars {
+          display: flex;
+
+          .star {
+            height: 24px;
+            width: 24px;
+          }
+        }
+
+        .btn-group {
+          padding: 5px;
+
+          .btn {
+            padding: 3px;
+            display: inline-flex;
+            justify-content: center;
+
+            &.btn-cart {
+              width: calc(100% - ((2 * 0.25rem) + (2 * 30px)));
+              background-color: var(--bs-primary);
+              border-radius: 5px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
