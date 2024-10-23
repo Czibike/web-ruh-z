@@ -20,6 +20,7 @@
 
 .cart-group {
   display: flex;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 1300px) {
@@ -49,6 +50,7 @@
   .item-img {
     display: grid;
     place-items: center;
+
     & img {
       max-width: 100px;
     }
@@ -406,6 +408,7 @@
   background-color: var(--color-purple);
 
   > ul.nav {
+    margin: 0.5rem;
     display: flex;
 
     > li {
@@ -423,10 +426,11 @@
     margin-top: 1rem;
     padding-left: 1rem;
     padding-bottom: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    gap: 0.75rem;
 
     .card {
+      max-width: 310px;
       margin-right: 0.5rem;
       padding: 0.5rem;
       border: none;
@@ -480,7 +484,6 @@
               width: calc(100% - ((2 * 0.25rem) + (2 * 30px)));
               background-color: var(--bs-primary);
               border-radius: 5px;
-
             }
           }
         }
