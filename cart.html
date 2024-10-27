@@ -80,10 +80,7 @@
       </div>
     </header>
 
-    <!-- side product section JS
-          - legutóbb MT
-          - legtöbbet MT
-          - legtöbbet EA -->
+    <!-- calculation table JS -->
     <main>
       <section class="sidebar-wrapper">
         <div class="sideBar"></div>
@@ -330,14 +327,14 @@
         </section>
         <section class="side-products">
           <ul class="nav">
-            <li><a href="#">legutóbb megtekintett</a></li>
-            <li><a href="#">legtöbbet megtekintett</a></li>
-            <li><a href="#">legtöbbet eladott</a></li>
+            <li><a href="cart/recently-viewed" class="recently-viewed-btn">legutóbb megtekintett</a></li>
+            <li><a href="cart/most-viewed" class="most-viewed-btn">legtöbbet megtekintett</a></li>
+            <li><a href="cart/bestsellers" class="bestsellers-btn">legtöbbet eladott</a></li>
           </ul>
           <div class="side-products-container">
             <div class="container recently-viewed"></div>
-            <div class="container most-viewed"></div>
-            <div class="container bestsellers"></div>
+            <div class="container most-viewed none"></div>
+            <div class="container bestsellers none"></div>
           </div>
           <script src="./javascript/cart/sideProductsRender.js"></script>
         </section>
