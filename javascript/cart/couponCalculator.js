@@ -27,9 +27,10 @@ const couponRender = (key, value) => {
       <strong>${key}</strong>
     </td>
     <td class="price">
-      <strong>${value}Ft</strong>
-    </td>
-  `;
+      <strong class="coupon-percent" data-value="${value}"></strong>
+    </td>`;
+
+  calculator();
 };
 
 btnCoupon.addEventListener("click", () => {
@@ -41,5 +42,6 @@ btnCoupon.addEventListener("click", () => {
       return;
     }
   }
+
   warningCouponRender();
 });

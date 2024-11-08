@@ -13,10 +13,12 @@ const setDeliver = (arr) => {
         <strong>${arr[0]}</strong>
       </td>
       <td class="price">
-        <strong>${arr[1]}Ft</strong>
+        <strong class="deliver-price" data-value="${arr[1]}">${arr[1]}</strong>
       </td>
     `;
+
   modal.close();
+  calculator();
 };
 
 const warningModalRender = () => {

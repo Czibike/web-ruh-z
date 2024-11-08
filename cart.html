@@ -80,6 +80,7 @@
       </div>
     </header>
 
+    <!-- item prices JS -->
     <!-- calculation table JS -->
     <main>
       <section class="sidebar-wrapper">
@@ -222,30 +223,31 @@
                         <strong>Teljes nettó</strong>
                       </td>
                       <td class="price">
-                        <strong>4000Ft</strong>
+                        <strong class="netto-price">4000</strong>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text">
+                        <strong>ÁFA (27%)</strong>
+                      </td>
+                      <td class="price">
+                        <strong class="tax-price">4000</strong>
                       </td>
                     </tr>
                     <tr class="couponJs"></tr>
                     <tr class="deliverJs"></tr>
                     <tr>
                       <td class="text">
-                        <strong>ÁFA (27%)</strong>
-                      </td>
-                      <td class="price">
-                        <strong>4000Ft</strong>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="text">
                         <strong>Összes</strong>
                       </td>
                       <td class="price">
-                        <strong>8000Ft</strong>
+                        <strong class="total-price-end">8000</strong>
                       </td>
                     </tr>
                   </tbody>
                 </table>
                 <script src="./javascript/cart/couponCalculator.js"></script>
+                <script src="./javascript/cart/priceCalculator.js"></script>
               </div>
               <div class="buttons">
                 <a href="./index.html" class="btn left continue">
@@ -327,9 +329,21 @@
         </section>
         <section class="side-products">
           <ul class="nav">
-            <li><a href="cart/recently-viewed" class="recently-viewed-btn">legutóbb megtekintett</a></li>
-            <li><a href="cart/most-viewed" class="most-viewed-btn">legtöbbet megtekintett</a></li>
-            <li><a href="cart/bestsellers" class="bestsellers-btn">legtöbbet eladott</a></li>
+            <li>
+              <a href="cart/recently-viewed" class="recently-viewed-btn"
+                >legutóbb megtekintett</a
+              >
+            </li>
+            <li>
+              <a href="cart/most-viewed" class="most-viewed-btn"
+                >legtöbbet megtekintett</a
+              >
+            </li>
+            <li>
+              <a href="cart/bestsellers" class="bestsellers-btn"
+                >legtöbbet eladott</a
+              >
+            </li>
           </ul>
           <div class="side-products-container">
             <div class="container recently-viewed"></div>

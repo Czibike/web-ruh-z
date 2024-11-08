@@ -285,6 +285,11 @@
 
     &:not(:first-child) {
       text-align: end;
+
+      &::after {
+        content: "Ft";
+        font-weight: bold;
+      }
     }
   }
 }
