@@ -52,7 +52,6 @@ const calculator = () => {
 
   const totalPrice = document.querySelector(".total-price-end");
   totalPrice.innerText = totalTemplete;
-  console.log("success");
 };
 
 calculator();

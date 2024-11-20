@@ -4,24 +4,21 @@ let cart = [
     imgSrc: "./images/fésű.jpg",
     name: "fésű",
     quantity: 1,
-    priceN: 2000,
-    priceT: 4000,
+    price: 1500,
   },
   {
     itemId: 1,
     imgSrc: "./images/borotva.webp",
     name: "borotva",
     quantity: 1,
-    priceN: 2000,
-    priceT: 4000,
+    price: 15000,
   },
   {
     itemId: 4,
     imgSrc: "./images/púder.jpg",
     name: "púder",
     quantity: 1,
-    priceN: 2000,
-    priceT: 4000,
+    price: 2000,
   },
 ];
 
@@ -39,6 +36,10 @@ const isEmpty = () => {
   }
 };
 
+const totalPrice = (price, quantity) => {
+  return price * quantity;
+};
+
 const onLoads = () => {
   isEmpty();
   renderItems();
@@ -49,14 +50,13 @@ window.onload = onLoads();
 const plusBtn = document.querySelectorAll(".plus");
 const minusBtn = document.querySelectorAll(".minus");
 const inputs = document.querySelectorAll(".input");
-let itemTemplete = "";
 
 function renderItems() {
-  let itemTemplete = "";
+  itemContainer.innerHTML = "";
   for (let i = 0; i < cart.length; i++) {
     const item = cart[i];
 
-    itemTemplete += `
+    itemContainer.innerHTML += `
       <div class="item">
         <div class="item-img center">
           <img src="${item.imgSrc}" alt="cart-item" />
@@ -70,15 +70,26 @@ function renderItems() {
         </div>
         <div class="quantity">
           <div class="stepper">
-            <input type="number" value="${item.quantity}" class="input" data-item-id=" ${item.itemId}" />
+            <input 
+              type="number" 
+              value="${item.quantity}" 
+              class="input" 
+              data-item-id=" ${item.itemId}" 
+            />
             <div class="stepper-btns">
               <button type="button">
-                <span class="material-symbols-outlined plus" data-item-id="${item.itemId}">
+                <span 
+                  class="material-symbols-outlined plus" 
+                  data-item-id="${item.itemId}"
+                >
                   keyboard_arrow_up
                 </span>
               </button>
               <button type="button">
-                <span class="material-symbols-outlined minus" data-item-id="${item.itemId}">
+                <span 
+                  class="material-symbols-outlined minus" 
+                  data-item-id="${item.itemId}"
+                >
                   keyboard_arrow_down
                 </span>
               </button>
@@ -86,24 +97,26 @@ function renderItems() {
           </div>
           <div class="delete-btn">
             <button type="button">
-              <span class="material-symbols-outlined delete" data-item-id="${item.itemId}"> close </span>
+              <span 
+                class="material-symbols-outlined delete" 
+                data-item-id="${item.itemId}"
+              > close </span>
             </button>
           </div>
         </div>
         <div class="unit-price center">
-          <span class="js-unit-price">${item.priceN} Ft</span>
+          <span class="js-unit-price">${item.price} Ft</span>
         </div>
         <div class="total-price center">
-          <span class="js-total-price">${item.priceT} Ft</span>
+          <span class="js-total-price" data-item-id="${item.itemId}">
+            ${totalPrice(item.price, item.quantity)} Ft
+          </span>
         </div>
       </div>
     `;
   }
 
-  itemContainer.innerHTML = itemTemplete;
-
   const deleteBtn = document.querySelectorAll(".delete");
-
   for (const btn of deleteBtn) {
     btn.addEventListener("click", (e) => {
       let id = Number(e.target.attributes[1].value);
@@ -123,6 +136,33 @@ function renderItems() {
   }
 }
 
+const quantityRender = (boolean, btnId) => {
+  let total = document.querySelectorAll(".js-total-price");
+
+  total.forEach((container) => {
+    let num = Number(container.getAttribute("data-item-id"));
+    if (num === btnId) {
+      if (boolean) {
+        cart.forEach((item) => {
+          if (item.itemId === btnId) {
+            item.quantity++;
+            total.innerHTML = totalPrice(item.price, item.quantity) + " Ft";
+            return;
+          }
+        });
+      } else {
+        cart.forEach((item) => {
+          if (item.itemId === btnId) {
+            item.quantity--;
+            total.innerHTML = totalPrice(item.price, item.quantity) + " Ft";
+            return;
+          }
+        });
+      }
+    }
+  });
+};
+
 plusBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     let btnId = Number(e.target.attributes[1].value);
@@ -132,6 +172,7 @@ plusBtn.forEach((btn) => {
 
       if (inputId === btnId) {
         input.value++;
+        quantityRender(true, btnId);
         break;
       }
     }
@@ -147,6 +188,7 @@ minusBtn.forEach((btn) => {
 
       if (inputId === btnId) {
         input.value--;
+        quantityRender(false, btnId);
         break;
       }
     }
